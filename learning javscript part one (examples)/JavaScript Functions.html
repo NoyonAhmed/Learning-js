@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript Functions</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Our Style Sheet -->
+		<link href="custom.css" rel="stylesheet">
+		
+		
+	</head>
+	<body>
+		
+		
+		<!-- JavaScript Functions -->
+		<div class="container">
+			<div class="row">
+				<div class="all_content">
+					<div class="header text-center">
+						<h1>Header</h1>
+					</div>
+					<div class="main_content">
+						<!-- JA simple function -->
+						<div class="function">
+							<h1>JA simple function</h1>
+							<button class="btn btn-info" onclick="myfunction1()">click here</button>
+							<h5 id="demo"></h5>
+						</div>
+						<!-- A function with an argument one-->
+						<div class="function">
+							<h1>A function with an argument one</h1>
+							<button class="btn btn-success" onclick='helloworld("noyon", "ahmed")'>click here</button>
+							<h4 id="demo2"></h4>
+						</div>
+						<!--A function with an argument 2-->
+						<div class="function">
+							<h1>A function with an argument 2</h1>
+							<form action="">
+								<input type="button" onclick='myfunction3("hello world", "this is true")' value='click' />
+								<input type="button" onclick='myfunction3("i am back", "this is false")' value='click' />
+							</form>
+							<h4 id="demo3"></h4>
+						</div>
+						<!--A function that returns a value-->
+						<div class="function">
+							<h1>A function that returns a value</h1>
+							<h4 id="demo4"></h4>
+						</div>
+						<!--A function that converts Fahrenheit to Celsius-->
+						<div class="function">
+							<h1>A function that converts Fahrenheit to Celsius</h1>
+							<h4 id="demo5"></h4>
+						</div>
+					</div>
+					<div class="footer text-center">
+						<h1>Footer</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	
+	
+	
+
+		<!-- Latest jquery  -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- A simple function -->
+		<script type="text/javascript">
+			function myfunction1(){
+				document.getElementById('demo').innerHTML = 'hello world this is hidden content its show when click the button up'
+			}
+		</script>
+		
+		<!-- A function with an argument one-->
+		<script type="text/javascript">
+			function helloworld(hello,ami){
+				document.getElementById('demo2').innerHTML = 'welcome' + ' ' + 'mr.' + hello +  ' ' + ami + '.'
+			}
+		</script>
+		
+		<!-- A function with an argument 2-->
+		<script type="text/javascript">
+			function myfunction3(x, y){
+				document.getElementById('demo3').innerHTML = x + ' ' +  y
+			}
+		</script>
+		
+		<!-- A function that returns a value -->
+		<script type="text/javascript">
+			var ami = myfunction4(20, 30);
+			document.getElementById('demo4').innerHTML = ami;
+			function myfunction4(a, b){
+				return a + b
+			}
+		</script>
+		
+		<!-- A function that returns a value -->
+		<script type="text/javascript">
+			function farenhight(x){
+				return (3 + 2) * (x + 2)
+			}
+			document.getElementById('demo5').innerHTML = farenhight(2)
+		</script>
+		
+		
+	</body>
+</html>

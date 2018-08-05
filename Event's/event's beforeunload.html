@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event's part 2</title>
+</head>
+<body> <!-- onbeforeunload="return myFunction()" // it will go inside the body tag-->
+    <!-- onbeforeunload -->
+    <h1>on before unload</h1>
+    <a href="https://google.com">click external link for leave this page</a>
+
+
+    <!-- in html -->
+    <!-- <script>
+        function myFunction() {
+            return 'nothing'
+        }
+    </script> -->
+
+    <!-- in javascript -->
+    <!-- <script>
+        window.onbeforeunload = function myFunction2(event) {
+            event.returnValue = 'nothing here';
+        }
+    </script> -->
+
+    <!-- addEventListener -->
+    <script>
+        window.addEventListener('beforeunload', function myFunction3(event) {
+            event.returnValue  =  'nothing here'
+        })
+    </script>
+
+</body>
+</html>

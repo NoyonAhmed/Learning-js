@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input Event's</title>
+    <style>
+        .hello {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- /"''''''''''''"\ input /"''''''''''"\ -->
+    <div>
+        <h1>Input</h1>
+        <input type="text" id="input"><br>
+        <input type="submit" value="submit">
+    </div>
+
+
+    <!-- /"''''''''''''"\ invalid /"''''''''''''"\ -->
+    <div>
+        <h1>invalid</h1>
+        <form action="/action_page.php" method="get">
+            <input type="text" name="name must required" id="demo" maxlength="10" required><br>
+            <input type="submit" value="submit"><br>
+            <h2 id="demo2"></h2>
+        </form>
+    </div>
+
+    <!-- limiting the charecter in the input feild -->
+    <div>
+        <h3>set cherecter</h3>
+        <form action="/action.php" method="get">
+            <input type="text" name="input anything" placeholder="input anyting as y0u want" id="demo3" pattern=".{6,}" autocomplete="on" required> <br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+
+
+    <!-- min and max value in the input fill -->
+    <div>
+        <h3>max and min value</h3>
+        <form action="/hello.php" method="get">
+            <input type="number" id="demo4" placeholder="write number" name="wrte number" max="15" min="5" required>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+
+
+    <!-- print between max and min value -->
+    <div>
+        <h3>print between max and min value</h3>
+        <input type="text" id="demo5">
+        <button onclick="myFunction()">submit</button>
+        <h3 id="demo6"></h3>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- /"''''''''''''"\ input /"''''''''''''"\ -->
+    
+    <script>
+        var a = document.getElementById('input');
+        a.addEventListener('input', function name() {
+            this.value;
+        })
+    </script>
+
+
+    <!-- /''\ invalid /''\ -->
+    <!-- first way to go -->
+    <script>
+        var inpu = document.getElementById('demo');
+        var inpu2 = document.getElementById('demo2')
+        inpu.addEventListener('invalid', function () {
+            document.getElementById('demo2').innerHTML = 'you must filld it';
+            inpu2.classList.add('hello');
+        })
+    </script>
+
+    <!-- set chereter -->
+    <script>
+        var chreck = document.getElementById('demo3');
+        chreck.addEventListener('invalid', function () {
+            alert('you must write 6 letter or number or more chercters')
+        })
+    </script>
+
+    <!-- max and min value  must put on input fill -->
+    <script>
+        var nice = document.getElementById('demo4');
+        nice.addEventListener('invalid', function () {
+            alert('you must min and max number in some respects 5 and 15 number put in the fill')
+        })
+    </script>
+
+    <!-- print between max and min value -->
+    <script>
+        function myFunction() {
+            var x;
+            var y;
+            x = document.getElementById('demo5').value;
+            if (isNaN(x) || x < 1 || x > 10) {
+                y = document.getElementById('demo6').innerHTML = 'the number is invalid'
+            } else {
+                y = document.getElementById('demo6').innerHTML = 'the number is valid'
+            }
+        }
+        
+    </script>
+
+    <!-- RESET -->
+    <div class="reset">
+        <h1>reset input</h1>
+        <form onreset="rest()">
+            <input type="text" placeholder="write and reset it">
+            <input type="reset">
+        </form>
+    </div>
+
+    <script>
+        function rest() {
+            alert('you reset everything')
+        }
+    </script>
+
+
+    <!-- Search -->
+    <div class="search">
+        <h1>search anything</h1>
+        <input type="search" id="myInput">
+        <h2 id="demo7"></h2>
+    </div>
+
+
+    <script>
+       document.addEventListener('search', function () {
+           var x = document.getElementById('myInput').value;
+           document.getElementById('demo7').innerHTML = 'you searced for : ' + x
+       })
+    </script>
+
+    <!-- Select -->
+    <div class="select">
+        <h1>Select some text from input</h1>
+        <input type="text" value="my text" id="myInput2">
+        <h2 id="demo8"></h2>
+    </div>
+
+    <script>
+        document.addEventListener('select', function () {
+            var x = document.getElementById('myInput2').value;
+            document.getElementById('demo8').innerHTML = 'you selected some text from input : ' + x;
+        })
+    </script>
+
+
+
+
+
+</body>
+</html>

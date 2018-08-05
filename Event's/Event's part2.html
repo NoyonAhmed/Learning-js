@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scroll event's</title>
+
+    <style>
+        .slideUp {
+            background: red;
+            height: 200px;
+            visibility: visible;
+            animation-name: slideUp;
+            animation-duration: 2s;
+        }
+        
+
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateX(100%)
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+                background: blue;
+            }
+        }
+    </style>
+</head>
+<body style="height: 1500px">
+    <div class="scroll">
+        <h1>scroll down to show animation</h1>
+        <div class="slide"></div>
+        <div id="slide" style="position: relative;top: 500px"></div>
+    </div>
+
+    <script>
+        window.onscroll = function(){myScroll()}
+        function myScroll() {
+            if (document.body.scrollTop >= 300 || document.documentElement.scrollTop >= 300) {
+                document.getElementById('slide').className = 'slideUp'
+            }
+        }
+        document.addEventListener('scroll', function () {
+            
+        })
+    </script>
+
+</body>
+</html>

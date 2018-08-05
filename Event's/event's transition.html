@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transtion Event's</title>
+
+    <style>
+        #demo {
+            background: red;
+            width: 300px;
+            height: 100px;
+            transition: 3s;
+        }
+        #demo:hover{
+            width: 400px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Transition Event's -->
+    <h1>Transition Event's</h1>
+    <h2 id="demo"></h2>
+
+
+    <script>
+        var a = document.getElementById('demo');
+        a.addEventListener('transitionend', function tran() {
+            this.innerHTML = 'trantionend will occured when events end';
+            this.style.background = 'blue';
+            this.style.color = 'white';
+        })
+    </script>
+
+</body>
+</html>Transtion

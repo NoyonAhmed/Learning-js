@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event's</title>
+</head>
+<body>
+    <!--  /"''''''''"\ Change Event's /"''''''''"\  -->
+    <div class="change">
+        <h1>Change the value</h1>
+        <select id="mySelect">
+            <option value="personOne">personOne</option>
+            <option value="personTwo">personTwo</option>
+            <option value="personThree">personThree</option>
+        </select>
+        <h2>you select : <span id="demo"></span></h2>
+        <input type="text">
+        <button type="reset">click</button>
+    </div>
+
+    <script>
+        document.addEventListener('change', function () {
+            var x = document.getElementById('mySelect').value;
+            document.getElementById('demo').innerHTML = x
+        })
+    </script>
+
+    <!-- /"''''''''"\ onload /"''''''''"\ -->
+    <div class="onload">
+        <h1>alert before img load</h1>
+        <img src="images.jpg" alt="" id="demo2">
+    </div>
+
+    <script>
+        var x = document.getElementById('demo2')
+        x.addEventListener('load', function () {
+            alert('img has not been load')
+        })
+    </script>
+
+
+
+</body>
+</html>

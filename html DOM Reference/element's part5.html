@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elements part 5</title>
+    <style>
+        .removeAttributesClass {
+            color: red;
+            font-size: 30px;
+        }
+        .removeAttributeNodeChild {
+            color: blue
+        }
+    </style>
+</head>
+<body>
+    <!-- CLient Height And WIdth -->
+    <div class="clientHeightAndWidth">
+        <h1>clientHeightAndWidth</h1>
+        <button onclick="myFunction()">Click</button>
+        <h2 id="demo" style="background: red; height: 100px;"></h2>
+    </div>
+
+    <!-- offsetWidth And offsetHeight -->
+    <div>
+        <h1>offsetHeight and offsetWidth</h1>
+        <button onclick="myFunction2()">click</button>
+        <h2 id="demo2" style="height: 100px; width: 400px; border: 5px solid;padding: 20px; background: blue; color: white"></h2>
+    </div>
+
+
+    <!-- offsetLeft And offsetTop -->
+    <div>
+        <h1>offsetLeft And offsetTop</h1>
+        <button onclick="myFunction3()">click</button>
+        <h2 id="demo3" style="height: 100px; width: 500px; margin: 20px; position: relative; left: 100px; background: gray"></h2>
+    </div>
+
+    <!-- direction -->
+    <div class="direction">
+        <h1>direction</h1>
+        <button onclick="directions()">click to change direction</button>
+        <h3 id="demo4">click the button above to change it directions</h3>
+    </div>
+
+    <!-- firstchild -->
+    <button onclick="myFunction4()">firstchild</button>
+    <div class="firstchild">
+        <h1>firstchild</h1>
+        <div id="parent">
+            <p>hello world</p>
+            <p>hello world</p>
+        </div>
+        <div id="demo5"></div>
+    </div>
+
+    <!-- cloneNode -->
+    <div class="cloneNode">
+        <button onclick="myFunction5()">cloneNode</button>
+        <ul id="clnNode">
+            <li>CLone this</li>
+            <li>CLone this</li>
+        </ul>
+        <h2 id="cloned"></h2>
+    </div>
+    
+
+    <!-- getAttributes() -->
+    <div class="getAttributes">
+        <h1>getAttributes</h1>
+        <h4 class="newCLass"></h4>
+        <h4 class="anotherClass"></h4>
+        <button onclick="myFunction6()">getAttribute</button>
+        <button onclick="myFunction7()">getAttribute</button>
+        <h3 id="demo6"></h3>
+        <h3 id="demo7"></h3>
+        <h3 id="demo8"></h3>
+    </div>
+
+    <!-- removeAttributes() -->
+    <div class="removeAttributes">
+        <h1>removeAttributes</h1>
+        <button onclick="myFunction8()">click</button>
+        <h5 class="removeAttributesClass">click</h5>
+        <h2 ></h2>
+    </div>
+
+    <!-- getAttributeNode() -->
+    <div class="getAttributeNode">
+        <h1>getAttributeNode</h1>
+        <button onclick="myFunction9()">click</button>
+        <h6 class="node"></h6>
+        <h2 id="demo9"></h2>
+    </div>
+
+    <!-- removeAttributeNode -->
+    <div class="removeAttributeNode">
+        <h1>removeAttributeNode</h1>
+        <button onclick="myFunction10()">removeAttributeNode</button>
+        <span id="demo10" class="removeAttributeNodeChild">removeAttributeNode child here</span>
+    </div>
+
+
+    <!-- hasAttribute -->
+    <div>
+        <h1>hasAttribute</h1>
+        <button onclick="myFunction11()">click</button>
+        <h2 id="demo11" class="demo11"></h2>
+    </div>
+
+    
+    <!-- insertAdjacentElement -->
+    <div>
+        <h1>insertAdjacentElement</h1>
+        <!-- afterend -->
+        <button onclick="myFunction12()">click</button>
+        <h2 id="demo12">move it down</h2>
+        <p id="demo13">move it up</p>
+        <!-- afterbegin -->
+        <button onclick="myFunction13()">click</button>
+        <h2 id="demo14">move it</h2>
+        <p id="demo15">also move it</p>
+        <!-- beforeend -->
+        <button onclick="myFunction14()">click</button>
+        <h2 id="demo16">move it</h2>
+        <p id="demo17">also move it</p>
+        <!-- beforebegin -->
+        <button onclick="myFunction15()">click</button>
+        <h2 id="demo18">move it</h2>
+        <p id="demo19">also move it</p>
+    </div>
+
+    <!-- insertAdjacentHTML -->
+    <div class="insertAdjacentHTML">
+        <h1>insertAdjacentHTML</h1>
+        <button onclick="myFunction16()">click</button>
+        <h2 id="demo20">insert new html after the elements</h2>
+    </div>
+
+    <!-- isContentEditable -->
+    <div>
+        <h1>isContentEditable</h1>
+        <button onclick="myFunction17()">click</button>
+        <h2 id="demo21" contenteditable="true">click here to edit this content</h2>
+    </div>
+
+
+    <!-- nextElementSibling -->
+    <div>
+        <h1>nextElementSibling</h1>
+        <button onclick="myFunction18()">nextElementSibling</button>
+        <ul>
+            <li id="demo22">home</li>
+            <li>about</li>
+        </ul>
+        <h2 id="demo23"></h2>
+    </div>
+
+    <!-- previousElementSibling -->
+    <div>
+        <h1>previousElementSibling</h1>
+        <button onclick="myFunction19()">previousElementSibling</button>
+        <ul>
+            <li>home</li>
+            <li id="demo24">about</li>
+        </ul>
+        <h2 id="demo25"></h2>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // CLient Height And WIdth
+        function myFunction() {
+            var a =  document.getElementById('demo');
+            document.getElementById('demo').innerHTML = a.clientHeight + ' is number of elements height and ' + a.clientWidth + ' is number of elements width';
+        }
+
+
+        //offsetWidth And offsetHeight
+        function myFunction2() {
+            var x = document.getElementById('demo2');
+            document.getElementById('demo2').innerHTML = x.offsetHeight + ' is number of full content height and ' + x.offsetWidth + ' is number of full content width with padding and border' ;
+        }
+
+
+        //offsetLeft And offsetTop
+        function myFunction3() {
+            var x = document.getElementById('demo3');
+            document.getElementById('demo3').innerHTML = x.offsetLeft + ' is number of client position left and ' + x.offsetTop + ' is number is client position top';
+        }
+
+        // dir;
+        function directions() {
+            document.getElementById('demo4').dir = 'rtl'
+        }
+
+        // firstElementChild
+        function myFunction4() {
+            var a = document.getElementById('parent').firstElementChild.innerHTML;
+            document.getElementById('demo5').innerHTML = a
+        }
+        
+        // cloneNode
+        function myFunction5() {
+            var a = document.getElementById('clnNode').firstElementChild;
+            var b = a.cloneNode(true);
+            document.getElementById('cloned').appendChild(b);
+        }
+
+
+        // getAttribute()
+        function myFunction6() {
+            var a = document.getElementsByTagName('h4')[1].getAttribute('class');
+            document.getElementById('demo6').innerHTML = a;
+        }
+        function myFunction7() {
+            var a = document.getElementById('demo7').getAttribute('id')
+            document.getElementById('demo8').innerHTML = a;
+        }
+
+        // removeAttribute()
+        function myFunction8() {
+            document.getElementsByTagName('h5')[0].removeAttribute('class');
+        }
+
+        // getAttributeNode()
+        function myFunction9() {
+            var a = document.getElementsByTagName('h6')[0].getAttributeNode('class').value;
+            document.getElementById('demo9').innerHTML = a;
+        }
+
+        // removeAttributeNode
+        function myFunction10() {
+           var a = document.getElementsByTagName('span')[0];
+           var b = a.getAttributeNode('class');
+           a.removeAttributeNode(b);
+        }
+
+        // hasAttribute()
+        function myFunction11() {
+            var a =  document.getElementById('demo11').hasAttribute('class');
+            document.getElementById('demo11').innerHTML = a;
+        }
+
+        // insertAdjacentElement
+
+        // afterend
+        function myFunction12() {
+            var a =  document.getElementById('demo12');
+            var b = document.getElementById('demo13');
+            b.insertAdjacentElement('afterend', a)
+        }
+        
+        // afterbegin
+        function myFunction13() {
+            var a = document.getElementById('demo14');
+            var b = document.getElementById('demo15');
+            a.insertAdjacentElement('afterbegin', b);
+        }
+        // beforeend
+        function myFunction14() {
+            var a = document.getElementById('demo16');
+            var b = document.getElementById('demo17');
+            a.insertAdjacentElement('beforeend', b);
+        }
+        // beforebegin
+        function myFunction15() {
+            var a = document.getElementById('demo18');
+            var b = document.getElementById('demo19');
+            a.insertAdjacentElement('beforebegin', b);
+        }
+
+
+        // insertAdjacentHTML
+        function myFunction16() {
+            var a = document.getElementById('demo20');
+            a.insertAdjacentHTML('beforebegin', '<h1 style = "color:red;">positioning it </h1>')
+        }// you can  add here afterend, afterbegin, beforeend
+        
+
+        // isContentEditable
+        function myFunction17() {
+            var a = document.getElementById('demo21').isContentEditable;
+            document.getElementById('demo21').innerHTML = a;
+        }
+
+
+        // nextElementSibling
+        function myFunction18() {
+            var a = document.getElementById('demo22').nextElementSibling.innerHTML;
+            document.getElementById('demo23').innerHTML = a;
+        }
+
+
+
+        // previousElementSibling
+        function myFunction19() {
+            var a = document.getElementById('demo24').previousElementSibling.innerHTML;
+            document.getElementById('demo25').innerHTML = a;
+        }
+
+
+
+    </script>
+</body>
+</html>
+
+
+<!-- 
+classList
+className
+firstchild
+firstElementChild
+lastChild
+lastElementChild
+clientHeight
+clientWidth
+clienLeft
+clientTop
+offsetHeight
+offsetWidth
+offsetTop
+offsetLeft
+innerHTML
+innerText
+insertAdjacentText
+insertAdjacentHTML
+id
+dir
+contains
+focus()
+blur()
+document.addEventLitener()
+document.removeEventLitener()
+getAttribute()
+getAttributeNode()
+removeAttribute()
+removeAttributeNode()
+hasAttribute() 
+getElementByTagName()
+getElementByClassName()
+iscontentEditable
+-->
+

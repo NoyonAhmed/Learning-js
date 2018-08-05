@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The HTML DOM Element Object</title>
+    <style>
+        h1{
+            font-size: 50px;
+            color: olive;
+            margin: 0px;
+        }
+        h2 {
+            margin: 0px;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            background: lawngreen;
+            color: lightseagreen;
+            font-size: 24px;
+        }
+        .newCLass {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .multi1 {
+            background: navy;
+            height: 50px;
+            width: 100px;
+        }
+        .multi2 {
+            background: moccasin;
+            height:70px;
+            width: 120px;
+            color: red;
+        }
+        .remove {
+            background: olive;
+            width: 100%;
+            height: 50px;
+            color: red;
+        }
+
+        .toggler {
+            color: indigo;
+            font-size: 50px;
+        }
+        .hello2 {
+            color: gray;
+            font-size: 30px;
+        }
+
+        /* dropdown menu */
+        .dropdownMenu {
+            height: 200px;
+        }
+        .grandpa {
+            color: darkgray;
+            font-size: 30px;
+            background: darkblue;
+            padding: 10px;
+            margin: 0;
+            margin-top: 20px;
+            width: 200px;
+            cursor: pointer;
+        }
+        .perent {
+            display: none;
+            background: darkcyan;
+            width: 200px;
+            padding: 10px;
+            list-style: none;
+            margin: 0;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- The HTML DOM Element Object -->
+    <!-- blur() -->
+    <!-- <div class="blur">
+        <h1>The HTML DOM Element Object</h1>
+        <input id="demo" type="text" placeholder="getFocus & loseFOcus"><br>
+        <button type="button" onclick="getFocus()">getFocus</button>
+        <button type="button" onclick="loseFOcus()">loseFOcus</button>
+    </div> -->
+    
+    <!-- childElementCount -->
+    <!-- <h1>childElementCount</h1>
+    <div id="demo2">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div> -->
+
+    <!-- children -->
+    <!-- <h1>total children of body</h1>
+    <h3 id="demo3"></h3> -->
+
+
+    <!-- classList -->
+    <div class="classList">
+        <!-- <h1>ClassList</h1> -->
+        <!-- call single class -->
+        <!-- <button type="button" onclick="newCLass()">click to style</button>
+        <div id="demo4">hello world</div> -->
+        <!-- call multiple class -->
+        <!-- <button type="button" onclick="multipleCLass()">click to multiple</button>
+        <h2 id="demo5">multipleCLass</h2> -->
+        <!-- remove class -->
+        <!-- <button type="button" onclick="remove()">click to remove style</button>
+        <h2 id="demo6" class="remove">click to remove style</h2> -->
+        <!-- toggle -->
+        <!-- <button type="button" onclick="toggler()">click to toggle</button>
+        <h2 id="demo7" class="toggler">click to style it</h2> -->
+        <!-- get the class name of the element's -->
+        <!-- <button type="button" onclick="getAllClass()">click</button>
+        <h2 id="demo8" class="hello gello cello"></h2>
+        <h2 id="demo9"></h2> -->
+        <!-- display true or false with contains elements -->
+        <!-- <button type="button" onclick="containt()">click</button>
+        <h2 class="demo10" id="demo10"></h2>
+        <h2 id="demo11"></h2> -->
+        <!-- Find out if an element has a "mystyle" class. If so, remove another class name: -->
+        <button type="button" onclick="hello()">click true or false</button>
+        <h2 id="demo12"  class="hello"></h2>
+
+
+        <!-- create Dropdown Menu -->
+        <!-- <div class="dropdownMenu">
+            <p class="grandpa" onclick="dropdown()">Dropdown</p>
+            <ul class="perent" id="demo14">
+                <li>home</li>
+                <li>about</li>
+                <li>contact</li>
+                <li>blog</li>
+            </ul>
+        </div> -->
+    </div> <!-- end style -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- all js code goes down here -->
+    <!-- blur() -->
+    <script>
+        function getFocus() {
+            document.getElementById('demo').focus();
+        }
+        function loseFOcus() {
+            document.getElementById('demo').blur();
+        }
+    </script>
+    <!-- childElementCount // this is property -->
+    <script>
+        var x = document.getElementById('demo2').childElementCount;
+        document.getElementById('demo2').innerHTML = x;
+    </script>
+    <!-- children //this is property-->
+    <script>
+        var x = document.body.children;
+        var text = '';
+        for (var a = 0; a < x.length; a++) {
+            text = text +  x[a].tagName + '<br>';
+        }
+        document.getElementById('demo3').innerHTML = text;
+    </script>
+
+
+    <!-- classList // this is property -->
+    <script>
+        // call single class
+        function newCLass() {
+            document.getElementById('demo4').classList.add('newCLass')
+        }
+
+        // call multiple class in element's;
+        function multipleCLass() {
+            document.getElementById('demo5').classList.add('multi1', 'multi2')
+        }
+         
+       
+        // remove element's from element
+        function remove(){
+            document.getElementById('demo6').classList.remove('remove');
+        }
+       
+
+
+        // toggle 
+        function toggler() {
+            document.getElementById('demo7').classList.toggle('toggler');
+        }
+
+
+        // get all class with one click
+        function getAllClass() {
+            var x = document.getElementById('demo8').classList;
+            document.getElementById('demo9').innerHTML = x;
+        }
+
+
+        // find out this element has 'class' elements true or false;
+        function containt() {
+            var x = document.getElementById('demo10').classList.contains('demo10');
+            document.getElementById('demo11').innerHTML = x;
+        }
+
+
+        //Find out if an element has a "mystyle" class. If so, remove another class name:
+        
+        function hello() {
+            var z = document.getElementById('demo12');
+            if (z.classList.contains('hello')) {
+                document.getElementById('demo12').innerHTML = 'this is true';
+                document.getElementById('demo12').classList.add('hello2');
+            } else {
+                alert(document.getElementById('demo12').innerHTML = 'this is false')
+            }
+        }
+
+
+        //dropdown menu
+        function dropdown() {
+            document.getElementById('demo14').classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js number</title>
+</head>
+<body>
+    <div class="js_number">
+        <h1>The toString() method can output numbers as hex, octal, and binary</h1>
+        <h1 id="demo"></h1>
+    </div>
+    <script>
+        var myNumber = 128;
+        document.getElementById('demo').innerHTML = '128 = ' + myNumber + ' Decimal ' +
+        myNumber.toString(16) + ' hexadecimal '+
+        myNumber.toString(8)+' octal ' +
+        myNumber.toString(2)+' binary'
+    </script>
+</body>
+</html>

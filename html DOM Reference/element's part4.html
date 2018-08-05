@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scroll to show effect's</title>
+
+    <style>
+        .mstyle {
+            color: red;
+        }
+        .none {color: inherit}
+    </style>
+
+
+</head>
+<body style="height: 1000px">
+    <h1>scroll to show effect's</h1>
+    <h2 id="demo" style="position: fixed;">scroll the page and show the magnificent magic</h2>
+
+
+    <script>
+        window.onscroll = function(){ hello()};
+        function hello() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById('demo').className = 'mstyle';
+            } else {
+                document.getElementById('demo').className = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

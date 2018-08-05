@@ -1,0 +1,27 @@
+.all_content {
+	background:#ddd;
+}
+h1,h2,h3,h4,h5,h6 {
+	text-transform:uppercase;
+}
+.main_content {
+	padding:50px;
+}
+.header h1  {
+	color:#fff;
+	background:#000;
+	padding:10px;
+	text-transform:uppercase;
+	font-weight:900;
+}
+.footer h1  {
+	color:#fff;
+	background: #000000;
+	padding:10px;
+	text-transform:uppercase;
+	font-weight:900;
+}
+.same_padding {
+	margin-bottom:50px;
+	padding: 10px;
+}

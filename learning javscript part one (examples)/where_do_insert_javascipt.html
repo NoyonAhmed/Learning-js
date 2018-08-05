@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>where do insert js</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Our Style Sheet -->
+		<link href="custom.css" rel="stylesheet">
+		
+		<!-- JavaScript in Head -->
+		<script type="text/javascript">
+			function change(){
+				document.getElementById('example6').style.color='blue'
+			} 
+			function change2(){
+				document.getElementById('example7').innerHTML ='hello js'
+			} 
+		</script>
+	</head>
+	<body>
+		
+		
+		<!-- where do insert js -->
+		<div class="container">
+			<div class="row">
+				<div class="all_content">
+					<div class="header text-center">
+						<h1>Header</h1>
+					</div>
+					<div class="main_content">
+						<!-- JavaScript in Head -->
+						<div class="JavaScript_in_Head same_padding">
+							<h2>JavaScript in Head</h2>
+							<h4 id='example6'>click the button below to change the content</h4>
+							<h4 id='example7'>click the button below to change the content</h4>
+							<button class="btn btn-success" onclick='change()'>click here</button>
+							<button class="btn btn-success" onclick='change2()'>click here</button>
+						</div>
+					</div>
+					<div class="footer text-center">
+						<h1>Footer</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	
+	
+	
+
+		<!-- Latest jquery  -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		
+	</body>
+</html>

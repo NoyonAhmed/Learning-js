@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript Variables</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Our Style Sheet -->
+		<link href="custom.css" rel="stylesheet">
+	</head>
+	<body>
+
+
+		<!-- JavaScript Variables -->
+		<div class="container">
+			<div class="row">
+				<div class="all_content">
+					<div class="header text-center">
+						<h1>Header</h1>
+					</div>
+					<div class="main_content">
+						<!--JavaScript variables-->
+						<div class="JavaScript_variables">
+							<h1>JavaScript variables</h1>
+							<p id="demo1"></p>
+						</div>
+						<!--JavaScript algebra-->
+						<div class="JavaScript_algebra">
+							<h1>JavaScript algebra</h1>
+							<p id="demo2"></p>
+						</div>
+						<!--JavaScript number and string-->
+						<div class="JavaScript_num_string">
+							<h1>JavaScript number and string</h1>
+							<p id="demo3"></p>
+						</div>
+						<!--JavaScript var keywords-->
+						<div class="JavaScript_keywords">
+							<h1>JavaScript keywords</h1>
+							<p id="demo4"></p>
+						</div>
+						<!--Declaring many variables in one statement and multiline statement-->
+						<div class="Declaring_many_variables_in_one_statement">
+							<h1>Declaring many variables in one statement</h1>
+							<p id="demo5"></p>
+						</div>
+						<!--Adding JavaScript numbers-->
+						<div class="Adding_JavaScript-numbers">
+							<h1>Adding JavaScript numbers</h1>
+							<p id="demo6"></p>
+						</div>
+						<!--Adding JavaScript string-->
+						<div class="Adding_JavaScript_string">
+							<h1>Adding JavaScript string</h1>
+							<h4 id="demo7"></h4>
+						</div>
+						<!--Adding JavaScript number and  string-->
+						<div class="Adding_JavaScript_num_string">
+							<h1>Adding JavaScript number and  string</h1>
+							<h4 id="demo8"></h4>
+						</div>
+						<!--Adding JavaScript number and  string-->
+						<div class="Adding_JavaScript_num_string">
+							<h1>Adding Constant </h1>
+							<h4 id="demo9"></h4>
+						</div>
+					</div>
+					<div class="footer text-center">
+						<h1>Footer</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<!-- Latest jquery  -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- JavaScript Variables -->
+		<script type="text/javascript">
+			var x,y,z;
+			x = 20;
+			y = 40;
+			z = x * y;
+			document.getElementById('demo1').innerHTML = z
+		</script>
+
+		<!-- JavaScript algebra -->
+		<script type="text/javascript">
+			var hello = 300;
+			 world = 500;
+			 noyon = hello + world;
+			document.getElementById('demo2').innerHTML = 'i am learning javascript' + '<br/>' + noyon
+		</script>
+		<!-- JavaScript number and string -->
+		<script type="text/javascript">
+			var rahim = 3.5;
+			var korim = ' point';
+			var noyon = rahim + korim;
+			document.getElementById('demo3').innerHTML = 'rahim got ' + noyon + ' in ssc examination'
+		</script>
+		<!-- JavaScript var keywords -->
+		<script type="text/javascript">
+			var hisname = 'noyon';
+			document.getElementById('demo4').innerHTML =  hisname
+
+
+
+		</script>
+		<!-- Declaring many variables in one statement and multiline statement-->
+		<script type="text/javascript">
+			var myname = 'noyon';
+			var hisname = 'choyon';
+			var salary = 3000;
+			var rahim = myname + hisname + salary;
+			document.getElementById('demo5').innerHTML = salary ;
+		</script>
+		<!-- Adding JavaScript numbers-->
+		<script type="text/javascript">
+			var x = 29 + 30 + 3020 * 2 / 50;
+			document.getElementById('demo6').innerHTML = x
+		</script>
+		<!-- Adding JavaScript string-->
+		<script type="text/javascript">
+            var noyon = 'i' + ' ' + 'love' + ' ' + 'you';
+            document.getElementById('demo7').innerHTML = noyon;
+
+            var noyon = 'this is me';
+            document.getElementById('demo8').innerHTML = 'noyon'
+		</script>
+		<!-- Adding Constant-->
+		<script type="text/javascript">
+            const pi = 'this is me';
+            document.getElementById('demo9').innerHTML = pi + ' i am here' ;
+		</script>
+
+	</body>
+</html>

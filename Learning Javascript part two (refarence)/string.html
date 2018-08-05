@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript String</title>
+</head>
+<body>
+    <!--javascript string pro-perty-->
+    <div class="javascript-string">
+        <div class="string">
+            <h1>javascript string length</h1>
+            <button type="button" name="button" onclick="myFunction()">click here to show text  length of the button</button>
+        </div>
+        <h3 id="demo"></h3>
+    </div>
+
+    <!--============================
+    ================================
+      javascript string Method
+    ================================
+    ================================-->
+    <div class="javascript-string">
+        <div class="string">
+            <h1>javascript string method</h1>
+        </div>
+        <h3 id="demo2"></h3>
+        <h3 id="demo3"></h3>
+        <h3 id="demo4"></h3>
+        <h3 id="demo5"></h3>
+        <h3 id="demo6"></h3>
+        <h3 id="demo7"></h3>
+        <h3 id="demo8"></h3>
+        <h3 id="demo9"></h3>
+        <h3 id="demo10"></h3>
+        <h3 id="demo11"></h3>
+        <h3 id="demo12"></h3>
+        <h3 id="demo13"></h3>
+        <h3 id="demo14"></h3>
+        <h3 id="demo15"></h3>
+        <h3 id="demo16"></h3>
+        <h3 id="demo17"></h3>
+        <h3 id="demo18"></h3>
+        <h3 id="demo19"></h3>
+        <h3 id="demo20"></h3>
+        <h3 id="demo21"></h3>
+        <h3 id="demo22"></h3>
+        <button type="button" name="button" onclick="myFunction()">CLick to Replace</button>
+        <h3 id="demo23"></h3>
+        <button type="button" name="button" onclick="myFunction2()">CLick to Replace</button>
+        <h3 id="demo24"></h3>
+        <h3 id="demo25"></h3>
+        <h3 id="demo26"></h3>
+        <h3 id="demo27"></h3>
+        <h3 id="demo28"></h3>
+        <h3 id="demo29"></h3>
+        <h3 id="demo30"></h3>
+        <h3 id="demo31"></h3>
+        <h3 id="demo32"></h3>
+        <h3 id="demo33"></h3>
+        <h3 id="demo34"></h3>
+        <h3 id="demo35"></h3>
+        <h3 id="demo36"></h3>
+        <h3 id="demo37"></h3>
+        <h3 id="demo38"></h3>
+    </div>
+
+
+
+
+
+    <!--javascript string length-->
+    <script type="text/javascript">
+        var a = 'click here to show length of the button';
+        function myFunction() {
+          document.getElementById('demo').innerHTML = a.length;
+        }
+    </script>
+
+
+    <!--============================
+    ================================
+      javascript string Method
+    ================================
+    ================================-->
+    <!-- method -->
+    <script type="text/javascript">
+        /* charAt()*/
+        var a = 'hello world';
+        document.getElementById('demo2').innerHTML = a.toUpperCase().charAt(0);
+        var b = 'HELLO WORLD';
+        document.getElementById('demo3').innerHTML = b.toLowerCase().charAt(b.length - 1);
+        /*concat()*/
+        var c = 'hello world';
+        var d = ' I AM NOYON';
+        document.getElementById('demo4').innerHTML = c.toUpperCase().concat(d);
+        var e = 'hello world';
+        var f = ' i am noyon';
+        var g = ' i love nabila';
+        document.getElementById('demo5').innerHTML = e.toUpperCase().concat(f + g);
+        /*endsWith();*/
+        var h = 'hello world i am noyon ahmed';
+        document.getElementById('demo6').innerHTML = h.endsWith('ahmed');
+        var i = 'hello world i am noyon ahmed';
+        document.getElementById('demo7').innerHTML = i.endsWith('world', 11);
+        /* includes();*/
+        var j = 'javscript';
+        document.getElementById('demo8').innerHTML = j.includes('s');
+        var j2 = 'hello world i am noyon ahmed';
+        document.getElementById('demo9').innerHTML = j2.includes('world', 11);
+        /*charCodeAt();*/
+        var k = 'hello world';
+        document.getElementById('demo10').innerHTML = k.charCodeAt(0);
+        var l = 'hello world';
+        document.getElementById('demo11').innerHTML = l.toUpperCase().charCodeAt(0);
+        /*// String.fromCharCode();*/
+        var m = String.fromCharCode(104);
+        document.getElementById('demo12').innerHTML = m;
+        document.getElementById('demo13').innerHTML = String.fromCharCode(102, 72, 80, 100);
+        /*indexOf()  ;*/
+        var n = 'man is mortal';
+        document.getElementById('demo14').innerHTML = n.indexOf('mortal');
+        /* you can print any of hese numbers*/
+        var o = 'this is gonna be man';
+        document.getElementById('demo15').innerHTML = o.indexOf('a');
+        /*// you can add start with paramter (its will count after 25 number letters);*/
+        var o2 = 'i am noyon ahmed and i want to be a biggest programmer in the world';
+        document.getElementById('demo16').innerHTML = o2.indexOf('a', 25);
+        /*/ lastindexOf();*/
+        var p = 'i want to be rich and serve a poor people';
+        document.getElementById('demo17').innerHTML = p.lastIndexOf('t');
+        /*// loacalComapare ();*/
+        var q = '1';
+        var q2 = '2';
+        document.getElementById('demo18').innerHTML = q.localeCompare(q2);
+        /*// q3 vs q4;*/
+        var q3 = '2';
+        var q4 = '1';
+        document.getElementById('demo19').innerHTML = q3.localeCompare(q4);
+        /*// q5 vs q6;*/
+        var q5 = '3';
+        var q6 = '4';
+        document.getElementById('demo20').innerHTML = q6.localeCompare(q5);
+        /*// q7 vs q8;*/
+        var q7 = '4';
+        var q8 = '4';
+        document.getElementById('demo21').innerHTML = q7.localeCompare(q8);
+        /*// repeat();*/
+        var r = 'Hello world';
+        document.getElementById('demo22').innerHTML = r.repeat(20);
+        /*// replace();*/
+        var s = 'this is blue car';
+        document.getElementById('demo23').innerHTML = s;
+        function myFunction() {
+          document.getElementById('demo23').innerHTML = s.replace('blue', 'red');
+        };
+        /*// multiple Replace (with replace case insetive)*/
+        var s1 = 'this is blue car and this is one of the best car in the world';
+        document.getElementById('demo24').innerHTML = s1;
+        function myFunction2() {
+          document.getElementById('demo24').innerHTML = s1.replace(/blue|world|this/gi, 'red');
+        };
+        /*// search();*/
+        var t = 'Mr. Blue has a blue house';
+        document.getElementById('demo25').innerHTML = t.search('blue');
+        /*/ multple search (case insetive beacause of i)*/
+        var t1 = 'Mr. Blue has a blue house';
+        document.getElementById('demo26').innerHTML = t1.search(/blue/i);
+        /*//slice ();*/
+        var u =  'this is me';
+        document.getElementById('demo27').innerHTML = u.slice(0);
+        /* start and end slice Method */
+        var u1 = 'this is not me';
+        document.getElementById('demo28').innerHTML = u1.slice(0, 11);
+        /*// split ();*/
+        var v = 'mr. noyon has a laptop';
+        document.getElementById('demo29').innerHTML = v.split();
+        /* without space ;*/
+        var v1 = 'mr. noyon has a laptop';
+        document.getElementById('demo30').innerHTML = v.split('');
+        /* with space ;*/
+        var v2 = 'mr. noyon has a laptop';
+        document.getElementById('demo31').innerHTML = v2.split(' ');
+        /* with number ;*/
+        var v3 = 'mr. noyon has a laptop';
+        document.getElementById('demo32').innerHTML = v3.split(' ', 2);
+        document.getElementById('demo31').innerHTML = v2.split(' ');
+        /* with blank ;*/
+        var v4 = 'mr. noyon has a laptop';
+        document.getElementById('demo33').innerHTML = v4.split('o');
+        /*startwith()*/
+        var w = 'mr. noyon has come';
+        document.getElementById('demo34').innerHTML = w.startsWith('mr.');
+        /*select with number*/
+        var w2 = 'mr. noyon has come';
+        document.getElementById('demo35').innerHTML = w2.startsWith('has', 10);
+        /*trim() (its remove all whitespace in the strings)*/
+        var x = '           mr. noyon has come     ';
+        document.getElementById('demo36').innerHTML = x.trim();
+        /*valueof()*/
+        var y = 'mr. noyon has come';
+        document.getElementById('demo37').innerHTML = y.valueOf();
+        /*String HTML Wrapper Methods*/
+        var y = 'mr. noyon has come';
+        document.getElementById('demo37').innerHTML = y.big().italics().fontcolor('red').fontsize(10).small().sup().sub();// etc you can includes here
+    </script>
+</body>
+</html>

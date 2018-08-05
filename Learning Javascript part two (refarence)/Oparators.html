@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oparators</title>
+</head>
+<body>
+    <h1>JavaScript Arithmetic Operators</h1>
+    <div class="Arithmetic">
+        <h2 id="demo"></h2>
+        <h2 id="demo2"></h2>
+        <h2 id="demo3"></h2>
+        <h2 id="demo4"></h2>
+        <h2 id="demo5"></h2>
+        <h2 id="demo6"></h2>
+        <h2 id="demo7"></h2>
+    </div>
+    <h1>JavaScript assignment Operators</h1>
+    <div class="assignment">
+        <h2 id="demo8"></h2>
+        <h2 id="demo9"></h2>
+        <h2 id="demo10"></h2>
+        <h2 id="demo11"></h2>
+        <h2 id="demo12"></h2>
+        <h2 id="demo13"></h2>
+    </div>
+    <h1>JavaScript comparition Operators</h1>
+    <div class="comparition">
+        <h2 id="demo14"></h2>
+        <h2 id="demo15"></h2>
+        <h2 id="demo16"></h2>
+        <h2 id="demo17"></h2>
+        <h2 id="demo18"></h2>
+    </div>
+    <!-- arithmetic -->
+    <script type="text/javascript">
+        var a = 20;
+        var b = 30;
+        var c = a + b;
+        document.getElementById('demo').innerHTML = c;// addition
+        var d = 30;
+        var d2 = 20;
+        document.getElementById('demo2').innerHTML = d - d2; // subtraction
+        var e = 2;
+        var e2 = 3;
+        document.getElementById('demo3').innerHTML = e * e2; // multiplication
+        var f = 6;
+        var f2 = 3;
+        document.getElementById('demo4').innerHTML = f / f2; // divition
+        var g = 10;
+        var g2 = 2;
+        document.getElementById('demo5').innerHTML = g % g2; // modules
+        var h = 10;
+        h++;// i = i + 1;
+        document.getElementById('demo6').innerHTML = h; // increcement
+        var i = 10;
+        i--;// i = i - 1;
+        document.getElementById('demo7').innerHTML = i; // decrecement
+    </script>
+    <!-- assignment oparators -->
+    <script type="text/javascript">
+        var j = 10;
+        var j2 = 5;
+        document.getElementById('demo8').innerHTML = j = j2; // Equal =
+        var k = 10;
+        var k2 = 20;
+        document.getElementById('demo9').innerHTML = k += k2; // k = k+k2 eqaul and plus;
+        var k = 230;
+        var k2 = 20;
+        document.getElementById('demo10').innerHTML = k -= k2; // k = k-k2 eqaul and minus;
+        var l = 10;
+        var l2 = 20;
+        document.getElementById('demo11').innerHTML = l *= l2; // l = l*l2 eqaul and multiplication;
+        var m = 20;
+        var m2 = 10;
+        document.getElementById('demo12').innerHTML = m /= m2; // m = m/m2 eqaul and divition;
+        var n = 10;
+        var n2 = 2;
+        document.getElementById('demo13').innerHTML = n %= n2; // k = k%k2 eqaul and plus;
+    </script>
+    <!-- comparition oparators -->
+    <script type="text/javascript">
+        var o = 10;
+        document.getElementById('demo14').innerHTML = (o == 10);// it will show true
+        var p = 10;
+        document.getElementById('demo15').innerHTML = (p == 9);// it will show  false
+        var q = '10';
+        document.getElementById('demo16').innerHTML = (q === 10);// it will show  false
+        var s = 19;
+        document.getElementById('demo17').innerHTML = (s != 10);// it will show  false
+        var s = 19;
+        document.getElementById('demo17').innerHTML = (s != 10);// it will show  false
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>drag Event's</title>
+    <style>
+        .droptarget {
+            width: 300px; 
+            height: 135px;
+            margin: 15px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+            padding-bottom: 50px;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <!-- ondrag -->
+
+    <div>
+        <h1>drag this text</h1>
+        <div class="droptarget" ondrop="drop(event)" ondragover="allowdrop(event)">
+            <h1 ondragstart="dragstart(event)"  draggable="true" id="dragTarget">drag me</h1>
+        </div>
+        <div class="droptarget" ondrop="drop(event)" ondragover="allowdrop(event)">
+
+        </div>
+       
+    </div>
+
+    <script>
+        function dragstart(event) {
+            event.dataTransfer.setData('img', event.target.id)
+        }
+
+        function allowdrop(event) {
+            event.preventDefault();
+        }
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData('img');
+            event.target.appendChild(document.getElementById(data));
+            event.target.style.color = 'red';
+        }
+    </script>
+
+   
+
+    <!-- ondrag, ondragstart, ondragend, ondrop, ondragover, ondragenter, ondragleave, ondrag -->
+    <div>
+       <h1>all in one</h1>
+       <div class="droptarget">
+            <h2 draggable="true" id="dataTarget">drag again</h2>
+       </div>
+       <div class="droptarget"></div>
+
+       <h3 id="demo"></h3>
+    </div>
+
+    <script>
+        var dragElement = document.getElementById('dataTarget');
+        dragElement.addEventListener('dragstart', function (event) {
+            event.dataTransfer.setData('text', event.target.id);
+            document.getElementById('demo').innerHTML = 'started darg from real elements';
+            event.target.style.opacity = '0.6';
+        })
+        document.addEventListener('drag', function (event) {
+            document.getElementById('demo').style.color = 'red'
+        })
+        document.addEventListener('dragend', function (event) {
+            document.getElementById('demo').innerHTML = 'finised the dragling';
+            document.getElementById('demo').style.color = '';
+            event.target.style.opacity = 1;
+        })
+        document.addEventListener('dragenter', function (event) {
+            if ('droptarget' === event.target.className) {
+                event.target.style.border = '4px dotted red ';
+            }
+        })
+        document.addEventListener('dragover', function (event) {
+            event.preventDefault()
+        })
+        document.addEventListener('dragleave', function (event) {
+            if ('droptarget' === event.target.className) {
+                event.target.style.border = '';
+            }
+        })
+        document.addEventListener('drop', function (event) {
+            event.preventDefault()
+            if ('droptarget' === event.target.className) {
+                event.target.style.border = '';
+                var data = event.dataTransfer.getData('text');;
+                event.target.appendChild(document.getElementById(data))
+            }
+        })
+    </script>
+</body>
+</html>

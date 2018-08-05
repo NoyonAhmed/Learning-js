@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event's Part3</title>
+</head>
+<body>
+    <!-- ontoggle -->
+    <div>
+        <h1>ontoggle</h1>
+        <details ontoggle><!-- you can do ontoggle in script like another on event -->
+            <summary>toggle this menu</summary>
+            <ul>
+                <li>home</li>
+                <li>
+                    <details ontoggle>
+                        <summary>home</summary>
+                        <ul>
+                            <li>home</li>
+                            <li>home</li>
+                            <li>home</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>home</li>
+                <li>home</li>
+            </ul>
+        </details>
+    </div>
+
+    
+
+    <!-- datials -->
+    <div class="details">
+        <h1>details</h1>
+        <input type="text" id="myInput">
+        <button id="myFunction">click</button>
+    </div>
+
+    <script>
+        var x = document.getElementById('myFunction');
+        x.addEventListener('click', function (event) {
+            var y = event.detail
+            document.getElementById('myInput').value = y
+        })
+    </script>
+
+    <!-- istrusted -->
+    <div>
+        <h1>IsTrusted</h1>
+        <button id="mybtn">click</button>
+    </div>
+
+    <script>
+        var mybtn = document.getElementById('mybtn')
+        mybtn.addEventListener('click', function () {
+            if ('isTrusted' in event) {
+                if (event.isTrusted) {
+                    alert('the ' + event.type + ' event is trusted')
+                } else {
+                    alert('the ' + event.type + ' event is not trusted')
+                }
+            } else {
+                alert('your browser is not suppurted isTrusted Event')
+            }
+        })
+    </script>
+
+
+    <!-- stopImmediatePropagation -->
+    <div class="stopImmediatePropagation">
+        <h1>stopImmediatePropagation</h1>
+        <button id="myBtn">click</button>
+    </div>
+
+    <script>
+        var myBtn = document.getElementById('myBtn');
+        myBtn.addEventListener('click', function () {
+            alert('The Second Alert Box wont works')
+            event.stopImmediatePropagation();
+        })
+        myBtn.addEventListener('click', function () {
+            alert('this alert box is not works becuase of stopimmediatepropagation prevent this event')
+        })
+
+    </script>
+
+
+    <!-- Target -->
+    <div class="target" id="demo">
+        <h1>Target</h1>
+        <p>Note : <span>click here for alert this tag <strong>name</strong> </span></p>
+    </div>
+
+    <script>
+        var item = document.getElementById('demo');
+        item.addEventListener('click', function () {
+            alert('this is ' + event.target.nodeName + ' which one you clicked');
+        })
+    </script>
+    
+</body>
+</html>

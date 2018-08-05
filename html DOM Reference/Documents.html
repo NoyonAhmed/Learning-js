@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The HTML DOcuments Object Methods and Property</title>
+  <link rel="stylesheet" href="elements.js">
+  <style>
+    h1 {
+      font-size: 50px;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>The HTML DOcuments Object Methods and Property</h1>
+  <input type="text" placeholder="An input field" onclick="myFunction()">
+  <button onclick="myFunction()">A Button</button>
+  <h2 id="demo"></h2>
+  <h1>addEventListener()</h1>
+  <h2 id="demo2"></h2>
+  <h2 id="demo3"></h2>
+  <h2 id="demo4"></h2>
+  <h2 id="demo5"></h2>
+  <h2 id="demo6"></h2>
+  <h2 id="demo7"></h2>
+  <h2 id="demo8"></h2>
+  <h2 id="demo9"></h2>
+  <button type="button" name="button" onclick="removeHandler()">Click</button>
+  <h2 id="demo10"></h2>
+
+
+  <h1>Document.baseURI</h1>
+  <button type="button" name="button" onclick="baseuri()">Click to show baseURI</button>
+  <h2 id="demo11"></h2>
+
+
+  <h1>document.body and document.createElement</h1>
+  <button type="button" name="button" onclick="appending()">Click to appendChild</button>
+
+
+  <h1>documetn.createElement</h1>
+  <button type="button" name="button" onclick="createelement()">Click to copy</button>
+  <br>
+  <button type="button" name="button" onclick="createelement2()">Click to copy</button>
+  <h2 id="demo12" style="border:2px solid">hello there</h2>
+
+
+  <h1>document.getElementByClassName()</h1>
+  <h2 class="demo13"></h2>
+  <button type="button" name="button" onclick="change()">Click</button>
+  <h2 class="demo14 demo15" style="border: 5px solid;height: 100px"></h2>
+  <h2 class="demo14 demo15" style="border: 5px solid;height: 100px"></h2>
+  <button type="button" name="button" onclick="multiple()">Click</button>
+  <h2 class="demo16" style="border: 5px solid;height: 100px"></h2>
+  <h2 class="demo16" style="border: 5px solid;height: 100px"></h2>
+  <h2 class="demo16" style="border: 5px solid;height: 100px"></h2>
+
+
+  <h1>document.getElementByClassName()</h1>
+  <h3 class="domo17"></h3>
+  <h3 id="domo18"></h3>
+
+  <!-- document.activeElement (properties) -->
+  <script>
+    function myFunction() {
+      var x = document.activeElement.tagName;
+      document.getElementById('demo').innerHTML = x;
+    }
+  </script>
+  <!-- document.addEventListener() (methods) -->
+  <script type="text/javascript">
+    // this is first addEventListener methods(way one);
+    document.addEventListener('click', function myFunction() {
+      document.getElementById('demo2').innerHTML = 'this is addeventlistener method 1st way';
+    }); //
+    // this is seconds addEventListener methods(way two);
+    document.addEventListener('click', myFunction2);
+
+    function myFunction2() {
+      document.getElementById('demo3').innerHTML = 'this is addeventlistener method 2nd way';
+    }; //
+    // this is Third addEventListener methods(way three-multiple addEventListener);
+    document.addEventListener('click', alertOne);
+    document.addEventListener('click', alertTwo);
+
+    function alertOne() {
+      document.getElementById('demo7').innerHTML = ('this is me');
+    };
+
+    function alertTwo() {
+      document.getElementById('demo8').innerHTML = ('this is you');
+    }; //
+    // // this is Third addEventListener methods(way three-multiple addEventListener- add many events listener on the documents);
+    // document.addEventListener('mouseover', Mouseover);
+    // document.addEventListener('click', Click);
+    // document.addEventListener('mouseout', Mouseout);
+    // function Mouseover() {
+    //   document.getElementById('demo4').innerHTML += 'Mouseover' + '<br>';
+    // }
+    // function Click() {
+    //   document.getElementById('demo5').innerHTML += 'Click' + '<br>';
+    // }
+    // function Mouseout() {
+    //   document.getElementById('demo6').innerHTML += 'Mouseout' + '<br>';
+    // }
+
+    // When passing parameter values, use an "anonymous function" that calls the specified function with the parameters:
+    var a = 10;
+    var b = 10;
+    document.addEventListener('click', function () {
+      math(a, b);
+    });
+
+    function math() {
+      var result = a * b;
+      document.getElementById('demo9').innerHTML = result;
+    }
+
+    //Change the background color of the document's <body> element
+    document.addEventListener('click', function () {
+      document.body.style.background = 'blue';
+    });
+
+    // Using the removeEventListener() method to remove an event handler that has been attached with the addEventListener() method:
+    var a;
+    document.addEventListener('mousemove', funtions);
+
+    function funtions() {
+      document.getElementById('demo10').innerHTML = Math.ceil((Math.random(a) * 100) + 1);
+    };
+
+    function removeHandler() {
+      document.removeEventListener('mousemove', funtions);
+    }
+
+    // //For browsers that don't support the addEventListener() method, you can use the attachEvent() method.
+    // if (document.addEventListener) {
+    //   document.addEventListener('click', myFunction);
+    // } else if (document.removeEventListener) {
+    //   document.removeEventListener('click', myFunction);
+    // }
+    // function myFunction() {
+    //   alert('this is me');
+    // }
+  </script>
+
+
+  <!-- document.baseURI -->
+  <script type="text/javascript">
+    function baseuri() {
+      var x = document.baseURI;
+      document.getElementById('demo11').innerHTML = x;
+    }
+  </script>
+
+  <!-- document.body -->
+  <script type="text/javascript">
+    function appending() {
+      var x = document.createElement('h3');
+      var y = document.createTextNode('this is heading');
+      x.appendChild(y);
+      document.body.appendChild(x);
+    }
+  </script>
+  <!-- document.createElement -->
+  <script type="text/javascript">
+    function createelement() {
+      var x = document.createElement('BUTTON');
+      var y = document.createTextNode('click again');
+      x.appendChild(y);
+      document.body.appendChild(x);
+    }
+
+    function createelement2() {
+      var x = document.createElement('h4');
+      var y = document.createTextNode('click the button again');
+      x.appendChild(y);
+      document.getElementById('demo12').appendChild(x);
+    }
+  </script>
+
+
+  <!-- document.getElementByClassName() -->
+  <!-- Call a single class name in the document -->
+  <script type="text/javascript">
+    var a = document.getElementsByClassName('demo13');
+    a[0].innerHTML = 'Hello world';
+  </script>
+
+  <!-- call multiple class in the document with space between class names but will show result one of them (call smae class both of the item)-->
+  <script type="text/javascript">
+    function change() {
+      var a = document.getElementsByClassName('demo14 demo15');
+      a[0].style.background = 'red';
+    }
+  </script>
+
+  <!-- show multiple changes in the document by add loops -->
+  <script type="text/javascript">
+    function multiple() {
+      var x = document.getElementsByClassName('demo16');
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.background = 'red';
+      }
+    }
+  </script>
+
+  <!-- document.getElementsByClassName() -->
+  <script type="text/javascript">
+    var x = document.getElementsByTagName('h3');
+    x[0].innerHTML = 'Hello World';
+  </script>
+
+<!-- 
+document.getElementByID()
+document.getElementByClassName()
+document.getElementsByTagName()
+document.addEventListener()
+document.removeEventListener()
+document.activeElement.tagname()// value, name etc
+document.body.style
+document.createElement()
+document.createTextNode()
+appendChild
+
+
+-->
+
+
+</body>
+
+</html>

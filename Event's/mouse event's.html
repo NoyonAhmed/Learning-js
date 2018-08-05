@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouse Event's</title>
+    
+    <style>
+        .click {
+            color: red;
+        }
+    </style>
+
+
+</head>
+<body>
+    <!-- //"" click ""\\ -->
+    <!-- as argument -->
+    <div>
+        <h1>click function as argument</h1>
+        <button onclick="myFucntion('blue')">click</button>
+        <h2 id="demo">click the button to change its color</h2>
+    </div>
+
+    <script>
+        function myFucntion(clr) {
+           document.getElementById('demo').style.color = clr
+        }
+    </script>
+
+    <!-- copy value from another text value -->
+    <div>
+        <h1>copy value from another text value</h1>
+        <input type="text" id="demo2" placeholder="hello world"> <br>
+        <input type="text" id="demo3"> <br>
+        <button id="demo4">click</button>
+    </div>
+
+    <script>
+        var input = document.getElementById('demo4')
+        input.addEventListener('click', function () {
+            document.getElementById('demo3').placeholder = document.getElementById('demo2').placeholder 
+        })
+    </script>
+
+    <!-- double Click -->
+    <div>
+        <h1>double Click</h1>
+        <button id="demo6">click</button>
+        <h2 id="demo5">click the button below for change background color</h2>
+        
+    </div>
+
+    <script>
+        var a = document.getElementById('demo6');
+        var b = document.getElementById('demo5');
+        a.addEventListener('dblclick', function () {
+            b.classList.toggle('click')
+        })
+    </script>
+
+    
+
+    <!-- mousemove, mouseenter , mouseover , mouseup, mouseleave, mousedowna nd mouseout -->
+    <div>
+        <h3>mousemove</h3>
+        <h2 id="demo7" style="width: 100px; height:100px;background: red">start counting</h2>
+        <h2 id="demo8" style="width: 100px; height:100px;background: red">start counting</h2>
+        <h2 id="demo9" style="width: 100px; height:100px;background: red">start counting</h2>
+        <h2 id="demo10" style="width: 100px; height:100px;background: red">start counting</h2>
+        <h2 id="demo11" style="width: 100px; height:100px;background: red">start counting</h2>
+        <h2 id="demo12" style="width: 100px; height:100px;background: red">start counting</h2>
+        <h2 id="demo13" style="width: 100px; height:100px;background: red">start counting</h2>
+    </div>
+
+    <script>
+        var a = 0;
+
+        var mouseMoving = document.getElementById('demo7');
+        var mouseMoving2 = document.getElementById('demo8');
+        var mouseMoving3 = document.getElementById('demo9');
+        var mouseMoving4 = document.getElementById('demo10');
+        var mouseMoving5 = document.getElementById('demo11');
+        var mouseMoving6 = document.getElementById('demo12');
+        var mouseMoving7 = document.getElementById('demo13');
+
+        mouseMoving.addEventListener('mousemove', moving1);
+        mouseMoving2.addEventListener('mouseover', moving2);
+        mouseMoving3.addEventListener('mouseout', moving3);
+        mouseMoving4.addEventListener('mousedown', moving4);
+        mouseMoving5.addEventListener('mouseleave', moving5);
+        mouseMoving6.addEventListener('mouseenter', moving6);
+        mouseMoving7.addEventListener('mouseup', moving7);
+
+        function moving1() {
+            document.getElementById('demo7').innerHTML = a +=  10
+        }
+        function moving2() {
+            document.getElementById('demo8').innerHTML = a +=  10
+        }
+        function moving3() {
+            document.getElementById('demo9').innerHTML = a +=  10
+        }
+        function moving4() {
+            document.getElementById('demo10').innerHTML = a +=  10
+        }
+        function moving5() {
+            document.getElementById('demo11').innerHTML = a +=  10
+        }
+        function moving6() {
+            document.getElementById('demo12').innerHTML = a +=  10
+        }
+        function moving7() {
+            document.getElementById('demo13').innerHTML = a +=  10
+        }
+
+    </script>
+
+
+
+    <!-- clientX, clientY, screenX, screenY, offsetX, offsetY, pageX, pageY -->
+    <div>
+        <h2 id="demo14" style="width: 500px; height: 400px; border: 1px solid"></h2>
+    </div>
+
+
+    <script>
+        var option = document.getElementById('demo14');
+        option.addEventListener('click', function (event) {
+            var a = event.clientX;
+            var b = event.clientY;
+            var c = event.screenX;
+            var d = event.screenY;
+            var e = event.offsetX;
+            var f = event.offsetY;
+            var g = event.pageX;
+            var h = event.pageY;
+            document.getElementById('demo14').innerHTML = 'clentX : ' + a + '<br>' + 'clenty : ' + b + '<br>' + 'screenX : ' + c + '<br>' + 'screenY : ' + d + '<br>' + ' offsetX : ' + e + '<br>' + 'offsetY : '  + f + '<br>' + 'pageX : ' + g + '<br>' + 'pageY' + h;
+        })
+    </script>
+
+
+    <!-- altkey, ctrlkey and shiftkey -->
+    <div>
+        <h1>All key here</h1>
+        <h2 id="demo15">press this line and select alt key into your keyboard</h2>
+    </div>
+
+    <script>
+        var x = document.getElementById('demo15');
+        x.addEventListener('click', function (event) {
+            if (event.altKey) {
+                alert('you clicked altkey')
+            } else if (event.shiftKey){
+                alert('you clicked shiftkey')
+            }else if(event.ctrlKey){
+                alert('you clicked ctrl key')
+            } else {
+                alert('you did not clicked altkey, ctrl key or shift key')
+            }
+            
+        })
+    </script>
+
+
+    
+</body>
+</html>

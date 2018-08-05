@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js comparisons</title>
+</head>
+
+<body>
+
+    <!--triple === if not equal-->
+    <div class="jsComparations">
+        <h1>js comparisons</h1>
+        <h2 id="demo"></h2>
+        <h2 id="demo2"></h2>
+        <h2 id="demo3"></h2>
+        <h2 id="demo4"></h2>
+        <h2 id="demo5"></h2>
+        <h2 id="demo6"></h2>
+        <h2 id="demo7"></h2>
+        <h2 id="demo8"></h2>
+        <h2 id="demo9"></h2>
+    </div>
+
+
+
+
+
+    <!--if variable values is equal equal statemant it will show true in the browser-->
+    <script>
+        var a = 5;
+        document.getElementById('demo').innerHTML = (a == 5)
+    </script>
+    <!--if variable values is not equal equal statemant it will show false in the browser-->
+    <script>
+        var a = 100;
+        document.getElementById('demo2').innerHTML = (a == 1290)
+    </script>
+
+    <!--triple === if equal it will show true-->
+    <script>
+        var a = 12;
+        document.getElementById('demo3').innerHTML = (a === 12);
+    </script>
+    <!--triple ===  if not equal it will show true-->
+    <script>
+        var a = 12;
+        document.getElementById('demo3').innerHTML = (a === 12);
+    </script>
+
+    <!--triple ===  ifot equal it  nwill show true-->
+    <script>
+        var a = 12;
+        document.getElementById('demo4').innerHTML = (a === '12');
+    </script>
+
+    <!--Assign 5 to x, and display the value of the comparison (x != 8) it will be goes all true but without this values will go false we can try here = or == and its result will same-->
+    <script>
+        var a = 120;
+        document.getElementById('demo5').innerHTML = (a !== 8);
+    </script>
+
+    <!--greater than and smaller than,equal or greater than and smaller than-->
+    <script>
+        var a = 10;
+        var b = 12;
+        var c = 144;
+        var d = 34;
+        document.getElementById('demo6').innerHTML = (a > 20);
+        /*it will go false because a (10)
+                                                                     20 er theke suto if boro hoto tahole true hoto*/
+
+        document.getElementById('demo7').innerHTML = (b < 13);
+        /*it will go true because b (12)
+                                                                     13 er theke suto if boro hoto tahole false hoto*/
+
+        document.getElementById('demo8').innerHTML = (c >= 143);
+        /*it will go true because c (144)
+                                                                     143 er theke boro if suto othoba equal  hoto tahole false hoto*/
+
+        document.getElementById('demo9').innerHTML = (d <= 33);
+        /*it will go false because d (34)
+                                                                     33 er theke boro if suto othoba equal  hoto tahole true hoto*/
+    </script>
+</body>
+
+</html>

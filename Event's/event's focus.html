@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event's part3</title>
+</head>
+<body>
+    <!-- onblur -->
+    <h1>onblur</h1>
+    <input type="text" id="demo" onblur="myFunction()"> <br>
+
+    <input type="text"  id="demo2"> <br>
+
+    <input type="text" name="" id="demo3"><br>
+
+    <input type="text" name="" id="demo4" onfocus="myOnFocus()" onblur="myOnBlur()">
+    <br>
+    <input type="text" name="" id="demo5">
+
+    <br>
+    <input type="text" name="" id="demo6">
+
+
+    <!-- in html -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById('demo');
+            x.value = x.value.length // you can add anything here as you wish
+        }
+    </script>
+
+    <!-- in javascript -->
+    <script>
+        document.getElementById('demo2').onblur = function(){myFunction2()}
+        function myFunction2() {
+            alert('put here anything')
+        }
+    </script>
+
+    <!-- addEventlitesener -->
+    <script>
+        document.getElementById('demo3').addEventListener('blur', function myFunction3() {
+            alert('write down here anything')
+        })
+    </script>
+
+    <!-- onblur and onfocus function -->
+    <script>
+        var a = document.getElementById('demo4');
+    
+        function myOnFocus() {
+            a.style.background = 'black';
+            a.style.color = 'white'
+            a.style.fontSize = '30px';
+            a.style.padding = '10px';
+        }
+        function myOnBlur() {
+            a.style.background = 'red';
+            a.style.color = 'yellow';
+            a.style.fontSize = '30px';
+            a.style.padding = '10px';
+            a.style.fontFamily = "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"
+        }
+    </script>
+
+
+    <!-- onblur and onfocus function deploy in addeventlitener -->
+
+    <script>
+        var a = document.getElementById('demo5');
+        a.addEventListener('focus',myFunction3, true);
+        a.addEventListener('blur',myFunction4, true);
+        function myFunction3() {
+            a.style.background = 'red'
+        }
+        function myFunction4() {
+            a.style.background = ''
+        }
+    </script>
+
+
+    <!-- focusin and focusout -->
+    <script>
+        var a = document.getElementById('demo6');
+        a.addEventListener('focusin', function myFunction5() {
+            a.style.background = 'black';
+            a.style.color = 'white'
+        })
+        a.addEventListener('focusout', function myFunction5() {
+            a.style.background = 'red';
+            a.style.color = 'blue'
+        })
+    </script>
+
+
+</body>
+</html>

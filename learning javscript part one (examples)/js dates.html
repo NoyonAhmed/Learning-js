@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js Dates</title>
+</head>
+<body onload="startTime()">
+    <!--Use Date() to display today's date and time-->
+    <div class="js_dates">
+        <h1>Use Date() to display today's date and time</h1>
+        <h2 id="demo"></h2>
+    </div>
+
+    <!--The getFullYear() method returns the full year of a date:-->
+    <div class="js_dates">
+        <h1>The getFullYear() method returns the full year of a date:</h1>
+        <h2 id="demo2"></h2>
+    </div>
+
+
+    <!--Use getTime() to calculate the number of milliseconds since 1970-->
+    <div class="js_dates">
+        <h1>Use getTime() to calculate the number of milliseconds since 1970</h1>
+        <h2 id="demo3"></h2>
+    </div>
+
+
+    <!--Use setFullYear() to set a specific date-->
+    <div class="js_dates">
+        <h1>Use setFullYear() to set a specific date</h1>
+        <h2 id="demo4"></h2>
+    </div>
+
+    <!--The toUTCString() method converts a date to a UTC string (date display
+    standard).-->
+    <div class="js_dates">
+        <h1>The toUTCString() method converts a date to a UTC string (date display
+            standard).</h1>
+        <h2 id="demo5"></h2>
+    </div>
+
+    <!--The getDay() method returns the weekday as a number-->
+    <div class="js_dates">
+        <h1>The getDay() method returns the weekday as a number</h1>
+        <h2 id="demo6"></h2>
+    </div>
+
+    <!--You can use an array to display the name of the weekday:-->
+    <div class="js_dates">
+        <h1>You can use an array to display the name of the weekday:</h1>
+        <h2 id="demo7"></h2>
+    </div>
+
+
+    <!--Display a clock-->
+    <div class="js_dates">
+        <h1>Display a clock</h1>
+        <h2 id="demo8"></h2>
+    </div>
+
+
+
+
+
+    <!--Use Date() to display today's date and time-->
+    <script>
+        document.getElementById('demo').innerHTML = Date()
+    </script>
+
+    <!--Use Date() to display today's date and time-->
+    <script>
+       var x  = new Date();
+       document.getElementById('demo2').innerHTML = x.getFullYear();
+    </script>
+
+    <!--Use getTime() to calculate the number of milliseconds since 1970-->
+    <script>
+        var x = new Date();
+        document.getElementById('demo3').innerHTML = x.getTime();
+    </script>
+
+    <!--Use setFullYear() to set a specific date-->
+    <script>
+        var x = new Date()
+        x.setFullYear(2018, 0, 21)
+        document.getElementById('demo4').innerHTML = x
+    </script>
+
+
+    <!--The toUTCString() method converts a date to a UTC string (date display
+    standard).-->
+    <script>
+        var a = new Date();
+        document.getElementById('demo5').innerHTML = a.toUTCString()
+    </script>
+
+    <!--The getDay() method returns the weekday as a number-->
+    <script>
+        var b = new Date();
+        document.getElementById('demo6').innerHTML = a.getDay()
+    </script>
+
+    <!--You can use an array to display the name of the weekday:-->
+    <script>
+        var c = new Date();
+        var days= [ 'sunday', 'monday', 'tuesday','wednesday','thursday','friday','saturday']
+        document.getElementById('demo7').innerHTML = days[c.getDay()]
+    </script>
+
+    <!--Display a clock-->
+    <script>
+        function startTime() {
+            var time = new Date();
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var second = time.getSeconds();
+            minutes = checkTime(minutes);
+            second = checkTime(second);
+            document.getElementById('demo8').innerHTML = hours + ':' + minutes + ':' + second
+            var today = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10){
+                i = '0' + i;
+            }
+            return i
+        }
+    </script>
+
+</body>
+</html>

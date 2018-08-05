@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event's Part one</title>
+
+    <style>
+        #demo {
+            background: red;
+            position: relative;
+            width: 500px;
+            height: 100px;
+        }
+
+        @-webkit-keyframes myMoves {
+            from{
+                top: 0;
+                left: 25%;
+            }
+            to{
+                top: 100px;
+                left: 25%;
+            }
+        }
+        @keyframes myMoves {
+            from{
+                top: 0;
+                left: 25%;
+            }
+            to{
+                top: 100px;
+                left: 25%;
+            }
+        }
+
+        #demo2 {
+            background: slateblue;
+            color: snow;
+            width: 500px;
+            height: 50px;
+            font-size: 30px;
+            animation-name: myAutoMove;
+            animation-duration: 2s;
+            position: relative;
+        }
+        @-webkit-keyframes myAutoMove{
+            from{
+                top:0px;
+            }
+            to {
+                top: 100px;
+            }
+        }
+        @keyframes myAutoMove {
+            from{
+                top:0px;
+            }
+            to {
+                top: 100px;
+            }
+        }
+
+        #demo3 {
+            background: salmon;
+            width: 500px;
+            height: 50px;
+            animation: mySecondeMove 5s infinite;
+            position: relative;
+        }
+
+        @-webkit-keyframes mySecondeMove {
+            from{top: 0px}
+            to{top:200px}
+        }
+        @keyframes mySecondeMove {
+            from{top: 0px}
+            to{top:200px}
+        }
+
+
+        #demo4 {
+            background: brown;
+            height: 100px;
+            width: 200px;
+            transition: 3s
+        }
+        #demo4:hover {
+            width: 400px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Animationstart, animationiteration , animationend & animationName</h1>
+
+    <button onclick="myFunction()">click</button>
+    <h2 id="demo">click the button above for start animations</h2>
+
+    <!-- animationName -->
+    <h1>animationName</h1>
+    <h3 id="demo2">auto start slides</h3>
+
+
+    <!-- elapsedTime -->
+    <!-- <h1>elapsedTime</h1>
+    <h2 id="demo3">its running</h2> -->
+
+    <!-- propertyName -->
+    <h1>propertyName</h1>
+    <h2 id="demo4"></h2>
+
+
+
+
+
+    <!-- animationstart, animationiteration, animationend -->
+    <script>
+        var animations = document.getElementById('demo');
+        function myFunction() {
+            animations.style.animation = 'myMoves 5s 2';
+        }
+
+        animations.addEventListener('animationstart', function myFunction2() {
+            this.innerHTML = 'animations started';
+            this.style.background = 'gray';
+            this.style.color = 'white';
+            this.style.fontSize = '35px';
+        })
+        animations.addEventListener('animationiteration', function myFunction3() {
+            this.innerHTML = 'animations running';
+            this.style.background = 'blue';
+            this.style.color = 'black';
+            this.style.fontSize = '40px';
+        })
+        animations.addEventListener('animationend', function myFunction4() {
+            this.innerHTML = 'animations end';
+            this.style.background = 'green';
+            this.style.color = 'white';
+            this.style.fontSize = '45px';
+        })
+    </script>
+
+
+    <!-- animationName -->
+    <script>
+        var x = document.getElementById('demo2');
+        x.addEventListener('animationstart', function myFunction5(noyon) {
+            this.innerHTML = 'hello world i animations' + noyon.animationName;
+        })
+    </script>
+
+
+    <!-- elapsedTime -->
+    <!-- <script>
+        var z = document.getElementById('demo3');
+        z.addEventListener('animationiteration', function myFunction6(event) {
+            this.innerHTML = 'counting ' + event.elapsedTime + ' seconds'
+        })
+    </script> -->
+
+
+    <!-- propertyName -->
+    <script>
+        var a = document.getElementById('demo4');
+        a.addEventListener('transitionend', function propertyNam(event) {
+            this.innerHTML = 'hello world : ' +  event.propertyName
+        })
+    </script>
+
+</body>
+</html>

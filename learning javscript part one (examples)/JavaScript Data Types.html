@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript Data Types</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Our Style Sheet -->
+		<link href="custom.css" rel="stylesheet">
+
+
+	</head>
+	<body>
+
+
+		<!-- JavaScript Data Types -->
+		<div class="container">
+			<div class="row">
+				<div class="all_content">
+					<div class="header text-center">
+						<h1>Header</h1>
+					</div>
+					<div class="main_content">
+						<!-- Declare (create) strings -->
+						<div class="data">
+							<h1> Declare (create) strings</h1>
+							<h4 id="demo"></h4>
+						</div>
+						<!-- Declare (create) number -->
+						<div class="data">
+							<h1>Declare (create) number</h1>
+							<h4 id="demo2"></h4>
+						</div>
+						<!-- Declare (create) an array -->
+						<div class="data">
+							<h1>Declare (create) an array</h1>
+							<h4 id="demo3"></h4>
+						</div>
+						<!-- Declare (create) an object -->
+						<div class="data">
+							<h1>Declare (create) an object</h1>
+							<h4 id="demo4"></h4>
+						</div>
+						<!-- Declare (create) an object 2-->
+						<div class="data">
+							<h1>Declare (create) an object</h1>
+							<h4 id="demo5"></h4>
+						</div>
+						<!--Find the type of a variable-->
+						<div class="data">
+							<h1>Declare (create) an object</h1>
+							<h4 id="demo6"></h4>
+						</div>
+						<!--Adding two numbers and a string-->
+						<div class="data">
+							<h1>Declare (create) an object</h1>
+							<h4 id="demo7"></h4>
+						</div>
+					</div>
+					<div class="footer text-center">
+						<h1>Footer</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<!-- Latest jquery  -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Declare (create) strings -->
+		<script type="text/javascript">
+			var x = 'this is me';
+			var y = 'this is you';
+			var answer = 'this is not me';
+			document.getElementById('demo').innerHTML = x + '<br/>' + y + '<br />' + answer;
+		</script>
+
+		<!-- Declare (create) number -->
+		<script type="text/javascript">
+			var x = 10.02;
+			var y = 20;
+			var answer = 30.02;
+			document.getElementById('demo2').innerHTML = x + '<br/>' + y + '<br />' + answer;
+		</script>
+
+		<!-- Declare (create) an array -->
+		<script type="text/javascript">
+			var x = ['ami', 'noyon', 'ahmed'];
+			document.getElementById('demo3').innerHTML = x[2]
+		</script>
+
+		<!-- Declare (create) an object -->
+		<script type="text/javascript">
+			var person = {
+				firstname: 'noyon',
+				lastname: 'ahmed',
+				age : 20,
+				year: 'years old'
+			};
+			document.getElementById('demo4').innerHTML = person.firstname + ' ' + person.lastname + ' ' + person.age + ' ' + person.year;
+			var ami = {
+				firstname : 'noyon',
+				lastname : 'ahmed',
+				age : 20,
+				years: 'years'
+			};
+			document.getElementById('demo5').innerHTML = ami.firstname + ' ' + 'gan gay'
+		</script>
+
+		<!-- Find the type of a variable -->
+		<script type="text/javascript">
+			document.getElementById('demo6').innerHTML =
+			typeof '' + '<br />' +
+			typeof 'jhon' + '<br />' +
+			typeof 100 + '<br />' +
+			typeof 'this is string in the qutations marks' + '<br />' +
+			typeof 'this is string and number' + '<br />' + typeof 30 + '<br />'
+ 		</script>
+
+		<!-- Adding two numbers and a string -->
+		<script type="text/javascript">
+			var x = 20 * 30 + ' ' + 'this is string';
+			document.getElementById('demo7').innerHTML = x
+ 		</script>
+
+	</body>
+</html>

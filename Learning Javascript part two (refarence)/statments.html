@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Statements</title>
+</head>
+<body>
+    <button type="button" name="button">
+        <a href="javascript:void(document.body.style.background = 'red')">Red</a>
+    </button>
+    <button type="button" name="button">
+        <a href="javascript:void(document.body.style.background = 'green')">Green</a>
+    </button>
+    <button type="button" name="button">
+        <a href="javascript:void(document.body.style.background = 'blue')">Blue</a>
+    </button>
+    <button type="button" name="button">
+        <a href="javascript:void(document.body.style.background = 'yellow')">Yellow</a>
+    </button>
+    <h1>javascript break Statements</h1>
+    <div class="Statements">
+        <h1>break</h1>
+        <h2 id="break"></h2>
+        <h1>continue</h1>
+        <h2 id="continues"></h2>
+        <h1>do while</h1>
+        <h2 id="dowhile"></h2>
+        <h1>for</h1>
+        <h2 id="fors"></h2>
+        <div class="function">
+            <h1>function</h1>
+            <h2 id="functions"></h2>
+            <h2 id="functions2"></h2>
+            <h2 id="functions3"></h2>
+            <button type="button" name="button" onclick="myfunction4()">click here</button>
+            <h2 id="functions4"></h2>
+            <h2 id="functions5"></h2>
+            <h2 id="functions6"></h2>
+        </div>
+        <div class="ifelse">
+            <h1>if else</h1>
+            <h2 id="demo"></h2>
+            <h2 id="demo2"></h2>
+        </div>
+        <!-- switch Statements-->
+        <div class="switch">
+            <h2 id="demo3"></h2>
+        </div>
+    </div>
+
+
+
+    <!-- javascript break Statements -->
+    <script type="text/javascript">
+        var text = '';
+        for (var i = 0; i < 10; i++) {
+          if (i === 6) {
+            break;
+          };
+          text += i + '<br>';
+          document.getElementById('break').innerHTML = text;
+        };
+    </script>
+
+    <!-- javascript continue Statements -->
+    <script type="text/javascript">
+        var continuesly = '';
+        for (var i = 0; i < 10; i++) {
+          if (i === 5) {
+            continue;
+          };
+          continuesly += i + '<br>';
+          document.getElementById('continues').innerHTML = continuesly;
+        };
+    </script>
+
+    <!-- do...while -->
+    <script type="text/javascript">
+        var doandwhile = '';
+        var i = 0;
+        do {
+          doandwhile += i + '<br>';
+          document.getElementById('dowhile').innerHTML = doandwhile;
+          i++;
+        } while (i < 10);
+    </script>
+
+    <!-- for -->
+    <script type="text/javascript">
+        var text = '';
+        for (var i = 0; i < 10; i++) {
+          text += i;
+          document.getElementById('fors').innerHTML = doandwhile;
+        }
+    </script>
+
+    <!-- function -->
+    <script type="text/javascript">
+        var a = 'this is function';
+        function myfunction() {
+          document.getElementById('functions').innerHTML = a;
+        };
+        myfunction();// first way to execute function
+        function myfunction2() {
+          return Math.PI;
+        }
+        document.getElementById('functions2').innerHTML = myfunction2();//second way to execute function
+        function myfunction3(a, b) {
+          return a * b;
+        };
+        document.getElementById('functions3').innerHTML = myfunction3(4, 4);// third way to execute function
+        function myfunction4() {
+          var a = 'this is click function';
+          document.getElementById('functions4').innerHTML = a;
+        };
+        var x = function myfunction(a, b) {
+          return (a * b);
+        };
+        document.getElementById('functions5').innerHTML = x;// Fourth way to execute function;
+    </script>
+
+    <!-- if else -->
+    <script type="text/javascript">
+        var time = new Date().getHours();
+        if (time < 24) {
+          document.getElementById('demo').innerHTML = 'good morning';
+        }else {
+          document.getElementById('demo').innerHTML = 'good evening';
+        };
+        // if else if Statements
+        var times = new Date().getHours();
+        if (times < 10) {
+          document.getElementById('demo2').innerHTML = 'good morning';
+        }else if (times < 20) {
+          document.getElementById('demo2').innerHTML = 'good afternoon';
+        }else {
+          document.getElementById('demo2').innerHTML = 'good night';
+        };
+        // click the button and change the image;
+        // switch elemement
+        var day;
+        switch (new Date().getDay()) {
+          case 0:
+            day = 'Sunday';
+            break;
+          case 1:
+            day = 'Monday';
+            break;
+          case 2:
+            day = 'Tuesday';
+            break;
+          default:
+        };
+        document.getElementById('demo3').innerHTML = day;
+    </script>
+
+</body>
+</html>

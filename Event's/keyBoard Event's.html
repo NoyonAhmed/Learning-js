@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KeyBoard Event's</title>
+</head>
+
+<body>
+    <!-- /"''''''''''"\ CharCode /"''''''''''"\ -->
+    <div>
+        <h1>CharCode</h1>
+        <input type="text" size="40">
+        <!--onkeypress="myFunction(event)" into the element's-->
+        <h2> hello world :
+            <span id="demo"></span>
+        </h2>
+    </div>
+
+    <!-- first way -->
+    <!-- <script>
+        function myFunction(event) {
+            var a = event.charCode;
+            document.getElementById('demo').innerHTML = a;
+        }
+    </script> -->
+
+    <!-- second way -->
+    <!-- <script>
+        document.addEventListener('keypress', function (event) {
+            var a = event.keyCode
+            document.getElementById('demo').innerHTML = a;
+        })
+    </script> -->
+
+    <!-- third way -->
+    <script>
+        document.addEventListener('keypress', function (event) {
+            var a = event.charCode || event.keyCode;
+            if (a === 10 || a === 104) {
+                document.getElementById('demo').innerHTML = 'you pressed h key'
+            } else {
+                document.getElementById('demo').innerHTML = 'you did not pressed h key'
+            }
+        })
+    </script>
+
+
+    <!-- /"''''''''''"\ Code  and key and keycode/"''''''''''"\ -->
+    <div>
+        <h1>return the key you was pressed</h1>
+        <input type="text">
+        <h2>key any press :
+            <span id="demo2"></span>
+        </h2>
+    </div>
+
+    <!-- <script>
+         document.addEventListener('keypress', function (event) {
+             var a = event.code;
+             document.getElementById('demo2').innerHTML = a;
+         })
+     </script> -->
+    <script>
+        document.addEventListener('keypress', function (e) {
+            var p = e.keyCode; // you can put here key;
+            document.getElementById('demo2').innerHTML = p;
+        })
+    </script>
+
+
+    <!-- keypress, keydown and keyup -->
+    <div>
+        <h1>keypress, keyup and keydown</h1>
+        <input type="text" id="demo3">
+         
+    </div>
+
+    <script>
+        document.addEventListener('keyup', function () {
+           document.getElementById('demo3').style.background = 'blue';
+        })
+        document.addEventListener('keydown', function () {
+           document.getElementById('demo3').style.background = 'red';
+        })
+    </script>
+
+</body>
+
+</html>

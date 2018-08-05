@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>where do insert js</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Our Style Sheet -->
+		<link href="custom.css" rel="stylesheet">
+		
+		
+		
+	</head>
+	<body>
+		
+		
+		<!-- where do insert js -->
+		<div class="container">
+			<div class="row">
+				<div class="all_content">
+					<div class="header text-center">
+						<h1>Header</h1>
+					</div>
+					<div class="main_content">
+						<!-- Writing into the HTML output -->
+						<div class="Writing_into_the_HTML_output">
+							<h1>Writing into an HTML output</h1>
+							<script type="text/javascript">
+								document.write(100+200)
+							</script>
+						</div>
+						<!-- Writing into an HTML element -->
+						<div class="Writing_into_an_HTML_element">
+							<h1 id='output'>Writing into an HTML element</h1>
+							<script type="text/javascript">
+								document.getElementById('output').innerHTML = 10+20;
+							</script>
+						</div>
+						<!-- Writing into an window alert box -->
+						<div class="Writing_into_an_window_alert_box">
+							<h1>Writing into an window alert box</h1>
+							<script type="text/javascript">
+								window.alert(100*10);
+							</script>
+						</div>
+						<!-- Writing into the browser console -->
+						<div class="Writing_into_browser_consol">
+							<h1>Writing into the browser console</h1>
+							<script type="text/javascript">
+								console.log(100+1000)//this is won't shown at browsers
+							</script>
+						</div>
+					</div>
+					<div class="footer text-center">
+						<h1>Footer</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	
+	
+	
+
+		<!-- Latest jquery  -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		
+	</body>
+</html>

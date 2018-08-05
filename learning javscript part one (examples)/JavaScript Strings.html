@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript STRING</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Our Style Sheet -->
+		<link href="custom.css" rel="stylesheet">
+		
+	
+	</head>
+	<body>
+		
+		
+		<!-- JavaScript Strings -->
+		<div class="container">
+			<div class="row">
+				<div class="all_content">
+					<div class="header text-center">
+						<h1>Header</h1>
+					</div>
+					<div class="main_content">
+						<!--Show some string examples.-->
+						<div class="strings">
+							<h1>Show some string examples.</h1>
+							<h4 id="demo"></h4>
+						</div>
+						<!--Backslash before quotes accepts quotes as quotes.-->
+						<div class="strings">
+							<h1>Backslash before quotes accepts quotes as quotes.</h1>
+							<h4 id="demo2"></h4>
+						</div>
+						<!--Find the length of a string-->
+						<div class="strings">
+							<h1>Find the length of a string</h1>
+							<h4 id="demo3"></h4>
+						</div>
+						<!--Find the position of the first occurrence of a text in a string - indexOf()-->
+						<div class="strings">
+							<h3>Find the position of the first occurrence of a text in a string - indexOf()</h3>
+							<h4 id="demo4"></h4>
+						</div>
+						<!--Replace characters in a string - replace()-->
+						<div class="strings">
+							<h3>Replace characters in a string - replace()</h3>
+							<h4 id="demo5">hello dear</h4>
+							<button onclick='myFuntion()'>click here</button>
+						</div>
+						<!--Convert string to upper case - toUpperCase()-->
+						<div class="strings">
+							<h3>Convert string to lower case:</h3>
+							<button onclick="myFunction3()">Try it</button>
+							<p id="demo7">HELLO WORLD!</p>
+						</div>
+					</div>
+					<div class="footer text-center">
+						<h1>Footer</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	
+	
+	
+
+		<!-- Latest jquery  -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- Show some string examples -->
+		<script type="text/javascript">
+			var x = 'this is my name';
+			var y = 'this is me';
+			var z = x + ' ' + y;
+			document.getElementById('demo').innerHTML = z
+		</script>
+		
+		<!-- Backslash before quotes accepts quotes as quotes. -->
+		<script type="text/javascript">
+			document.getElementById('demo2').innerHTML = 'this \'is\' me '
+		</script>
+		
+		<!-- Find the length of a string -->
+		<script type="text/javascript">
+			var x = 'abaskasjcasc';
+			document.getElementById('demo3').innerHTML = x.length
+		</script>
+	
+		<!-- Find the position of the first occurrence of a text in a string - indexOf() -->
+		<script type="text/javascript">
+			var str = 'this "is" me';
+			var position = str.indexOf("is");
+			document.getElementById('demo4').innerHTML = position
+		</script>
+		
+		<!--Replace characters in a string - replace()-->
+		<script type="text/javascript">
+			function myFuntion(){
+				var text = document.getElementById('demo5').innerHTML;
+				var str = text.replace('dear','world');
+				document.getElementById('demo5').innerHTML = str
+			}
+		</script>
+		
+		<!--Convert string to upper case - toUpperCase()-->
+		<script type="text/javascript">
+			function eh(){
+				var texting = document.getElementById('demo6').innerHTML;
+				document.getElementById('demo6').innerHTML = texting.toUpperCase()
+			}
+		</script>
+		
+		<!--Convert string to upper case - toUpperCase()-->
+		<script>
+			function myFunction3() {
+				var text = document.getElementById("demo7").innerHTML;
+				document.getElementById("demo7").innerHTML = text.toLowerCase();
+			}
+		</script>
+		
+		
+	</body>
+</html>

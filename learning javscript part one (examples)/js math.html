@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js math</title>
+</head>
+<body>
+    <!--js math-->
+    <div class="js">
+        <h1>js math</h1>
+        <p id="demo"></p>
+    </div>
+
+    <!--js round-->
+    <div class="math">
+        <h1>Math.round(x) returns the value of x rounded to its nearest integer:</h1>
+        <h2 id="demo2"></h2>
+    </div>
+
+    <!--js Math Power-->
+    <div class="math">
+        <h1>Math.pow(x,y) returns the value of x to the power of y:</h1>
+        <h2 id="demo3"></h2>
+    </div>
+
+    <!--js Math Square Root-->
+    <div class="math">
+        <h1>Math.sqrt(x) returns the square root of x</h1>
+        <h2 id="demo4"></h2>
+    </div>
+
+    <!--js Math absolute (positive)-->
+    <div class="math">
+        <h1>Math.abs(x) returns the absolute (positive) value of x:</h1>
+        <h2 id="demo5"></h2>
+    </div>
+
+
+    <!--js Math ceil up-->
+    <div class="math">
+        <h1>Math.ceil() rounds a number <strong>up</strong> to its nearest integer:</h1>
+        <h2 id="demo6"></h2>
+    </div>
+
+    <!--js Math ceil down-->
+    <div class="math">
+        <h1>Math.floor(x) returns the value of x rounded down</h1>
+        <h2 id="demo7"></h2>
+    </div>
+
+    <!--js Math Sin-->
+    <div class="math">
+        <h1>Math.sin(x) returns the sin of x (given in radians):</h1>
+        <h2 id="demo8"></h2>
+    </div>
+
+    <!--js Math Sin-->
+    <div class="math">
+        <h1>Math.cos(x) returns the cosin of x (given in radians):</h1>
+        <h2 id="demo9"></h2>
+    </div>
+
+    <!--js Math Max-->
+    <div class="math">
+        <h1>Math.max() return the number with the highest value from a list of arguments</h1>
+        <h2 id="demo10"></h2>
+    </div>
+    <!--js Math Min-->
+    <div class="math">
+        <h1>Math.min() return the number with the highest value from a list of arguments</h1>
+        <h2 id="demo11"></h2>
+    </div>
+
+    <!--JavaScript Celcius to Fahrenhet-->
+    <div class="math">
+       <h1>JavaScript Celcius to Fahrenhet</h1>
+        <input id="cecias" type="text" onkeyup="convert('c')">
+        <input id="farenheight" type="text" onkeyup="convert('f')">
+    </div>
+
+
+
+
+    <!-- ALl js here-->
+
+    <!--js math-->
+    <script>
+        document.getElementById('demo').innerHTML = Math.PI
+    </script>
+
+    <!--js math Round-->
+    <script>
+        document.getElementById('demo2').innerHTML = Math.round(4.29)
+    </script>
+
+    <!--js math power-->
+    <script>
+        document.getElementById('demo3').innerHTML = Math.pow(3, 3)
+    </script>
+
+    <!--js math power-->
+    <script>
+        document.getElementById('demo4').innerHTML = Math.sqrt(64);
+    </script>
+
+    <!--js math absolute (positive)-->
+    <script>
+        document.getElementById('demo5').innerHTML = Math.abs(-19.212)
+    </script>
+
+
+    <!--js math ceil up-->
+    <script>
+        document.getElementById('demo6').innerHTML = Math.ceil(40)
+    </script>
+
+    <!--js math ceil down-->
+    <script>
+        document.getElementById('demo7').innerHTML = Math.floor(4.99)
+    </script>
+
+    <!--js math sin-->
+    <script>
+        document.getElementById('demo8').innerHTML = Math.sin(90 * Math.PI / 180 )
+    </script>
+
+    <!--js math Cos-->
+    <script>
+        document.getElementById('demo9').innerHTML = Math.cos(0 * Math.PI / 180 )
+    </script>
+
+    <!--js math Max-->
+    <script>
+        document.getElementById('demo10').innerHTML = Math.max(10,20,-299,299,200,28,37,-198)
+    </script>
+
+    <!--js math Max-->
+    <script>
+        document.getElementById('demo11').innerHTML = Math.min(10,20,-299,299,200,28,37,-198)
+    </script>
+    <!--JavaScript Celcius to Fahrenhet-->
+    <script>
+        function convert(degree) {
+            var x;
+            if (degree == "c"){
+                x = document.getElementById('cecias').value * 9 / 5 + 32;
+                document.getElementById('farenheight').value = Math.round(x);
+            }
+            else {
+                x = (document.getElementById('farenheight').value-32) * 5 / 9;
+                document.getElementById('cecias').value = Math.round(x);
+            }
+        }
+    </script>
+
+
+</body>
+</html>

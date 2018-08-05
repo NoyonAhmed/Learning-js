@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript Objects</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Our Style Sheet -->
+		<link href="custom.css" rel="stylesheet">
+		
+		
+	</head>
+	<body>
+		
+		
+		<!-- JavaScript Objects -->
+		<div class="container">
+			<div class="row">
+				<div class="all_content">
+					<div class="header text-center">
+						<h1>Header</h1>
+					</div>
+					<div class="main_content">
+						<!-- Create a JavaScript object -->
+						<div class="objects">
+							<h1>Create a JavaScript object</h1>
+							<h3 id="demo"></h3>
+						</div>
+						<!-- Access object properties using .property -->
+						<div class="objects">
+							<h1>Access object properties using .property</h1>
+							<h3 id="demo2"></h3>
+						</div>
+						<!-- Access a function property as a method -->
+						<div class="objects">
+							<h1>Access a function property as a method</h1>
+							<h3 id="demo3"></h3>
+						</div>
+						<!-- Access a function property as a property -->
+						<div class="objects">
+							<h1>Access a function property as a method</h1>
+							<h3 id="demo4"></h3>
+						</div>
+					</div>
+					<div class="footer text-center">
+						<h1>Footer</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	
+	
+	
+
+		<!-- Latest jquery  -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- Create a JavaScript object, first way -->
+		<script type="text/javascript">
+			var  person = {
+				firstname : 'noyon',
+				lastname : 'ahmed',
+				age : 20,
+				country : 'sylhet'
+			};
+			document.getElementById('demo').innerHTML = person.firstname + ' ' + person.lastname + ' ' + person.age + ' ' + 'years old'
+		</script>
+		
+		<!-- Access object properties using [property] ,its number 2 way -->
+		<script type="text/javascript">
+			var ami = {
+				firstname : 'jhon ', lastname : 'doe ', age : '20 years'
+			};
+			document.getElementById('demo2'). innerHTML = ami['firstname'] + ami['lastname'] + ami['age']
+		</script>
+		
+		<!-- Access a function property as a method -->
+		<script type="text/javascript">
+			var person = {
+				firstname : 'noyon',
+				lastname : 'ahmed',
+				fullname :function() {
+					return this.firstname + ' ' + this.lastname;
+				}
+			};
+			document.getElementById('demo3').innerHTML = person.fullname();
+		</script>
+		
+		<!-- Access a function property as a property -->
+		<script type="text/javascript">
+			var introduce = {
+				firstname: 'noyon',
+				lastname: 'ahmed',
+				fullname:function(){
+					return this.firstname + ' ' + this.lastname;
+				}
+			};
+			document.getElementById('demo4').innerHTML = introduce.fullname
+		</script>
+		
+	</body>
+</html>

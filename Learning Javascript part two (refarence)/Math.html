@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math</title>
+</head>
+<body>
+    <!-- Math -->
+    <div class="math">
+        <h1>Math</h1>
+        <h2 id="demo"></h2>
+        <h2 id="demo2"></h2>
+        <h2 id="demo3"></h2>
+        <h2 id="demo4"></h2>
+        <h2 id="demo5"></h2>
+        <h2 id="demo6"></h2>
+        <h2 id="demo7"></h2>
+        <h2 id="demo8"></h2>
+        <h2 id="demo9"></h2>
+        <h2 id="demo10"></h2>
+        <h2 id="demo11"></h2>
+        <h2 id="demo12"></h2>
+        <h2 id="demo13"></h2>
+        <h2 id="demo14"></h2>
+    </div>
+
+    <!-- Math Script -->
+    <script type="text/javascript">
+        var a = Math.abs(10.28319238);
+        var b = Math.abs(-10.28713);
+        var c = Math.abs(null);
+        var d = Math.abs(10 + 20);
+        var e = Math.abs('Hello World');
+        var f = a + '<br>' + b + '<br>' + c + '<br>' + d + '<br>' + e;
+        document.getElementById('demo').innerHTML = f;//abs() end here
+        // ceil;
+        var g = Math.ceil(1.99);
+        var h = Math.ceil(0.01);
+        var i = Math.ceil(-10);
+        var j = g + '<br>' + h + '<br>' + i;
+        document.getElementById('demo2').innerHTML = j;//
+        // floor ();
+        var k = Math.floor(1.99);
+        var l = Math.floor(-2.50);;
+        document.getElementById('demo3').innerHTML = k + '<br>' + l;//
+        // pow();
+        var n = 2;
+        var o = 3;
+        document.getElementById('demo4').innerHTML = Math.pow(n, o);// n er power o 2*2*2=8
+        // random () one way to go
+        document.getElementById('demo5').innerHTML = Math.random(a) * 100 + 1;//
+        // random() 2 way to go
+        var a;
+        document.getElementById('demo6').innerHTML = Math.ceil((Math.random(a) * 100) + 1);//
+        // sqrt();
+        var a = 25;
+        document.getElementById('demo7').innerHTML = Math.sqrt(a);//
+        // round;
+        var a = 2.49;
+        document.getElementById('demo8').innerHTML = Math.round(a);// it will rounded down 2
+        var b = 2.50;
+        document.getElementById('demo9').innerHTML = Math.round(b);// it will rounded up 3
+        // acos();
+        var a = Math.acos(0.12013);
+        var b = Math.acos(-1);// it will return Pi value
+        document.getElementById('demo10').innerHTML = a;
+        document.getElementById('demo11').innerHTML = b;
+    </script>
+
+</body>
+</html>
+<!--
+   abs();
+   pow();
+   random();
+   sqrt();
+   round();
+   ceil();
+   floor();
+   acos();
+ -->

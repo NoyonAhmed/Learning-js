@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>what can javascript do</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Our Style Sheet -->
+		<link href="custom.css" rel="stylesheet">
+	</head>
+	<body>
+		
+		
+		<!-- What can Javascript do -->
+		<div class="container">
+			<div class="row">
+				<div class="all_content">
+					<div class="header text-center">
+						<h1>Header</h1>
+					</div>
+					<div class="main_content">
+						<!--javascript can change Html Content-->
+						<div class="javascript_can_change_Html_Content same_padding">
+							<h2>javascript can change Html Content</h2>
+							<p id='example1'>this is html content</p>
+							<button class='btn btn-info' onclick="document.getElementById('example1').innerHTML ='hello world i am learning javascript programming language'">click here</button>
+						</div>
+						<!--javascript can change Html Attributes-->
+						<div class="javascript_can_change_Html_Attributes same_padding">
+							<h2>javascript can change Html Attributes</h2>
+							<h4>click the button to show magic</h4>
+							<button class='btn btn-info' onclick="document.getElementById('example2').src='media/light-bulb.gif'">Turn on the light</button>
+							<img src="media/pic_bulboff.gif" alt="" id='example2'/>
+							<button class='btn btn-primary' onclick='document.getElementById("example2").src="media/pic_bulboff.gif"'>Turn off the light</button>
+							
+						</div>
+						<!--javascript can change Css Style-->
+						<div class="javascript_can_change_Css_Style same_padding">
+							<h2>javascript can change Css Style</h2>
+							<h4 id='example3'>click the button to change style</h4>
+							<button class='btn btn-danger' onclick="document.getElementById('example3').style.color='blue'">click here</button>
+						</div>
+						<!--javascript can Hide html content-->
+						<div class="javascript_can_change_hide_html_content same_padding">
+							<h2>javascript can Hide html content</h2>
+							<h4 id='example4'>click the button to hide content</h4>
+							<button class='btn btn-success' onclick="document.getElementById('example4').style.display='none'">click here</button>
+						</div>
+						<!--javascript can show html content-->
+						<div class="javascript_can_show_html_content same_padding">
+							<h2>javascript can Hide html content</h2>
+							<h4 id='example5' style='display:none;'>click the button to hide content</h4>
+							<button class='btn btn-success' onclick="document.getElementById('example5').style.display='block'">click here</button>
+						</div>
+					</div>
+					<div class="footer text-center">
+						<h1>Footer</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	
+	
+	
+
+		<!-- Latest jquery  -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		
+	</body>
+</html>

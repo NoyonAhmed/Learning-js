@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Conditionals</title>
+</head>
+<body>
+    <!--js conditionsals-->
+    <div class="jsCondition">
+        <h1>Js Conditions</h1>
+        <h2 id="demo"></h2>
+        <h2 id="demo2"></h2>
+        <h2 id="demo3"></h2>
+        <h2 id="demo4"></h2>
+        <h2 id="demo5"></h2>
+        <h2 id="demo6"></h2>
+        <h2 id="demo7"></h2>
+        <h2 id="demo8"></h2>
+        <h2 id="demo9"></h2>
+        <h2 id="demo10"></h2>
+        <h2 id="demo11"></h2>
+    </div>
+
+
+
+    <!--js conditionsals if condition-->
+    <script>
+
+    </script>
+    <script>
+        var a = 99;
+        if (a > 100){
+            document.getElementById('demo').innerHTML = a;
+        }else{
+            document.getElementById('demo').innerHTML = a
+        }
+    </script>
+
+    <!--tulona kora-->
+    <script>
+        var priceOfEgg = 10;
+        var priceOfHen = 200;
+        if (priceOfEgg > priceOfHen){
+            document.getElementById('demo2').innerHTML = 'priceofegg are smaller than prize for hen'
+        }
+        else {
+            document.getElementById('demo2').innerHTML = 'priceofegg are greater than prize for hen'
+        }
+    </script>
+
+    <!--tara ki brothers -- multiple line-->
+    <script>
+        var personOne = 'jamal';
+        var personTwo = 'kamal';
+        var result = true;
+        if ('jamal' == personOne){
+            if ('kamal' == personTwo){
+                if(result){
+                    document.getElementById('demo3').innerHTML = 'kamal and jamal are brothers'
+                }else {
+                    document.getElementById('demo3').innerHTML = 'kamal and jamal not are brothers'
+                }
+            }
+        }
+    </script>
+
+    <!--tara ki same -- single line-->
+    <script>
+        var personOne = 'noyon',personTwo = 'ahmed',result = false;
+        if ('noyon' == personOne && 'ahmed' == personTwo && result){
+            document.getElementById('demo4').innerHTML = 'they are same'
+        }else {
+            document.getElementById('demo4').innerHTML = 'they are not same'
+        }
+    </script>
+
+    <!--ei sonkha gular maje kuno ta ase naki ...jacai kora == multiple line -->
+    <script>
+        //2 ,3 ,5, 7 this is prime number/ purnosonkha
+        var x = 4;
+        if (x < 10){
+            if (2 ==  x || 3 == x || 5 == x || 7 == x){
+                document.getElementById('demo5').innerHTML = 'this number ' + x +' is smaller than 10 and its a prime number'
+            }else {
+                document.getElementById('demo5').innerHTML = 'this number ' + x +' is smaller than 10 and its not a prime number'
+            }
+        }else {
+            document.getElementById('demo5').innerHTML = 'this number is greater than 10'
+        }
+    </script>
+
+    <!--ei sonkha gular maje kun ta ase naki ...jacai kora == single line -->
+    <script>
+        //2 ,3 ,5, 7 this is prime number/ purnosonkha
+        var x = 5;
+        if (x < 10 && (2 == x || 3 == x || 5 == x || 7 == x)){
+            document.getElementById('demo6').innerHTML = 'this number ' + x + ' is samller than 10 and its prime number'
+        }else if (x < 20){
+            document.getElementById('demo6').innerHTML = 'this number ' + x + ' is samller than 20 and its not prime number'
+        }else{
+            document.getElementById('demo6').innerHTML = 'this number greater than 10'
+        }
+    </script>
+
+    <!--positive or nagative -->
+    <script>
+        var x = 12;
+        var result;
+        if (x>0){
+            var result = 'this number ' + x +' is positive'
+        }else{
+            var result = 'this number ' + x +' is nagative'
+        }
+        document.getElementById('demo7').innerHTML = result
+    </script>
+
+    <!--Even And Odd (jur bejur) -->
+    <script>
+        var a = 12;
+        var b = 2;
+        var c = a % b;
+        var result;
+        if (0 == c){
+            var result = 'this number is even';
+        }else {
+            var result = 'this number is odd';
+        }
+        document.getElementById('demo8').innerHTML = result
+    </script>
+
+    <!--movie rating (kara dhekte parbe ar kara dhekte parbe na) == multiple way-->
+    <script>
+        var movieRating = 'parentGuide';
+        var age = 12;
+        var result;
+        if ('parentGuide' == movieRating && age >= 13){
+            var result = 'you can watch this movie 1'
+        }else if ('adult' == movieRating && age >= 18){
+            var result = 'you can watch this movie 2'
+        }else if ('general' == movieRating){
+            var result = 'you can watch this movie3'
+        }else {
+            var result = 'you can not watch this movie'
+        }
+        document.getElementById('demo').innerHTML = result
+    </script>
+
+    <!--movie rating (kara dhekte parbe ar kara dhekte parbe na) == sort-surt way-->
+    <script>
+        var movieRating = 'parentGuide';
+        var movieRating2 = 'general';
+        var movieRating3 = 'adult';
+        var age = 12;
+        var result;
+        if ( ('parentGuide'  == movieRating  && age >=13) || ('general' == movieRating2 && age >14 ) || ('adult' == movieRating3 && age >= 18) ){
+            var result = 'you can watch this movie';
+        }else {
+            var result = 'you can not watch this movie';
+        }
+        document.getElementById('demo9').innerHTML = result;
+    </script>
+
+    <!--your age determinations -->
+    <script>
+        var yourAge = 11;
+        var result ;
+        if (yourAge < 0){
+            result = 'you have not yet arrived in the world'
+        }else if (yourAge <= 1){
+            result = 'you are baby';
+        }else if (yourAge <= 3) {
+            result = 'you are toddler';
+        }else if (yourAge <= 12) {
+            result = 'you are kid';
+        }else if (yourAge <= 17) {
+            result = 'you are teenager';
+        }else if (yourAge <= 18) {
+            result = 'you are adult';
+        }else {
+            result = 'you are non of these';
+        }
+        document.getElementById('demo10').innerHTML = result;
+    </script>
+    <script>
+        var a = 10;
+        var result = (a > 0) ? 'this is positive' : 'this is nagative';
+        document.getElementById('demo11').innerHTML = result;
+    </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date</title>
+</head>
+<body>
+    <div class="date">
+        <h1>Date Referense</h1>
+        <h2 id="demo"></h2>
+        <h2 id="demo2"></h2>
+        <h2 id="demo3"></h2>
+        <h2 id="demo4"></h2>
+        <h2 id="demo5"></h2>
+        <h2 id="demo6"></h2>
+        <h2 id="demo7"></h2>
+        <h2 id="demo8"></h2>
+        <h2 id="demo9"></h2>
+        <h2 id="demo10"></h2>
+        <h2 id="demo11"></h2>
+        <h2 id="demo12"></h2>
+        <h2 id="demo13"></h2>
+        <h2 id="demo14"></h2>
+        <h2 id="demo15"></h2>
+        <h2 id="demo16"></h2>
+        <h2 id="demo17"></h2>
+        <h2 id="demo18"></h2>
+        <h2 id="demo19"></h2>
+        <h2 id="demo20"></h2>
+        <h2 id="demo21"></h2>
+        <h2 id="demo22"></h2>
+        <h2 id="demo23"></h2>
+        <h2 id="demo24"></h2>
+        <h2 id="demo26"></h2>
+        <h2 id="demo27"></h2>
+        <h2 id="demo28"></h2>
+        <h2 id="demo29"></h2>
+        <h2 id="demo30"></h2>
+        <h2 id="demo31"></h2>
+        <h2 id="demo32"></h2>
+        <h2 id="demo33"></h2>
+        <h2 id="demo34"></h2>
+        <h2 id="demo35"></h2>
+        <h2 id="demo36"></h2>
+        <h2 id="demo37"></h2>
+        <h2 id="demo38"></h2>
+        <h2 id="demo39"></h2>
+        <h2 id="demo40"></h2>
+    </div>
+
+
+    <!-- Date Referense -->
+    <script type="text/javascript">
+        //date()
+        var a = new Date();
+        document.getElementById('demo').innerHTML = a;// display whole date and times of the day;
+        // getDate();
+        var x = new Date();
+        var y = x.getDate(); // it will show only date of the week with number (0 to 6);
+        document.getElementById('demo2').innerHTML = 'Today is ' + y + 'th Day';//
+        // display only date of the day up ^ here;
+    </script>
+    <!-- get weekday instead of number -->
+    <script type="text/javascript">
+        var a = new Date();
+        var weekdays = new Array();
+        weekdays[0] = 'Sunday';
+        weekdays[1] = 'Monday';
+        weekdays[2] = 'Tuesday';
+        weekdays[3] = 'Wednesday';
+        weekdays[4] = 'ThursDay';
+        weekdays[5] = 'Friday';
+        weekdays[6] = 'Seturday';
+        document.getElementById('demo3').innerHTML = weekdays[a.getDay()];
+    </script>
+    <!-- getFullYear() -->
+    <script type="text/javascript">
+        var a = new Date();
+        document.getElementById('demo4').innerHTML = a.getFullYear();//
+        // we can print any year;
+        var x = new Date('May 10, 2017 01:20:00');
+        document.getElementById('demo9').innerHTML = x.getFullYear();//
+    </script>
+    <!-- getHours() -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo5').innerHTML = x.getHours();
+    </script>
+    <!-- getmilisecond() -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo6').innerHTML = x.getMilliseconds();
+    </script>
+    <!-- getminutes() -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo7').innerHTML = x.getMinutes();
+    </script>
+    <!-- getMonth() -->
+    <script type="text/javascript">
+        var a = new Date();
+        document.getElementById('demo8').innerHTML = x.getMonth();
+    </script>
+    <!-- get time with using getHours(), getMinutes(), getSeconds(), getMilliseconds() -->
+    <script type="text/javascript">
+        var a = new Date();
+        var b = a.getHours();
+        var c = a.getMinutes();
+        var d = a.getSeconds();
+        var e = a.getMilliseconds();
+        var f = b + ':' + c + ':' + d + ':' +  e;
+        document.getElementById('demo10').innerHTML = f;
+    </script>
+    <!-- getMonth() // get current month name from 12 month -->
+    <script type="text/javascript">
+        var x = new Date();
+        var month = new Array();
+        month[0] = 'January';
+        month[1] = 'February';
+        month[2] = 'March';
+        month[3] = 'April';
+        month[4] = 'May';
+        month[5] = 'June';
+        month[6] = 'July';
+        month[7] = 'August';
+        month[8] = 'September';
+        month[9] = 'Octobor';
+        month[10] = 'November';
+        month[11] = 'December';
+        document.getElementById('demo11').innerHTML = month[x.getMonth()];
+    </script>
+    <!-- getSeconds -->
+    <script type="text/javascript">
+        var a = new Date();
+        document.getElementById('demo12').innerHTML = a.getSeconds();
+    </script>
+    <!-- getYear since  1 January 1970 from 10 April 2018 (total 48 Years)-->
+    <script type="text/javascript">
+        var x = new Date();
+        var minuites = 1000 * 60;
+        var hours = minuites * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var time = x.getTime();
+        var total = (time / years);
+        document.getElementById('demo13').innerHTML = Math.round(total);
+    </script>
+    <!-- getUTCDate() -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo14').innerHTML = x.getUTCDate();
+    </script>
+    <!-- getutcday -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo15').innerHTML = x.getUTCDay();
+    </script>
+    <!-- getUTCSeconds() -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo16').innerHTML = x.getUTCSeconds();
+    </script>
+    <!-- getutcminuties -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo17').innerHTML = x.getUTCMinutes();
+    </script>
+    <!-- getutcmiliseconds() -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo18').innerHTML = x.getUTCMilliseconds();
+    </script>
+    <!-- getutchours() -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo19').innerHTML = x.getUTCHours();
+    </script>
+    <!-- getUTCMonth() -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo20').innerHTML = x.getUTCMonth();
+    </script>
+    <!-- Display month name with getUTCHours(), getUTCMinutes(), getUTCSeconds() -->
+    <script type="text/javascript">
+        var x = new Date();
+        var month = new Array();
+        month[0] = 'January';
+        month[1] = 'February';
+        month[2] = 'March';
+        month[3] = 'April';
+        month[4] = 'May';
+        month[5] = 'June';
+        month[6] = 'July';
+        month[7] = 'Auguest';
+        month[8] = 'September';
+        month[9] = 'Octobor';
+        month[10] = 'November';
+        month[11] = 'December';
+        document.getElementById('demo21').innerHTML = month[x.getUTCMonth()];
+    </script>
+    <!-- getUTCfullyear() -->
+    <script type="text/javascript">
+        var a = new Date();
+        document.getElementById('demo22').innerHTML = a.getUTCFullYear();
+    </script>
+    <!-- Perce (show milisecond from the time) -->
+    <script type="text/javascript">
+        var x = Date.parse('January 01, 2018');
+        document.getElementById('demo24').innerHTML = x;
+    </script>
+    <!-- setDate() -->
+    <script type="text/javascript">
+        var x = new Date();
+        x.setDate(11);
+        document.getElementById('demo25').innerHTML = x;
+    </script>
+    <!-- setFullYear() -->
+    <script type="text/javascript">
+        var x = new Date();
+        x.setFullYear(2018);
+        document.getElementById('demo26').innerHTML = x;
+    </script>
+    <!-- sethours() -->
+    <script type="text/javascript">
+        var x = new Date();
+        x.setHours(2);
+        document.getElementById('demo27').innerHTML = x;
+    </script>
+    <!-- setmiliseconds(),setminuties(),setday(),setmonth() all the list item are same processing so i dont want to do it again -->
+    <!-- setutctime(), setutcdate(), setutcfullyear(), Seutcthours(), setutc minuites(), setutcseconds(), setutcmiliseconds(),setMonth() are the same to other -->
+
+    <!-- toDateString -->
+    <script type="text/javascript">
+        var x = new Date();
+        document.getElementById('demo28').innerHTML = x.toDateString();
+    </script>
+</body>
+</html>

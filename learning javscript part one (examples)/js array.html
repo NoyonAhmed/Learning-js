@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Js Array</title>
+</head>
+
+<body>
+    <!--create an two array-->
+    <div class="array">
+        <h1>create an two array</h1>
+        <h3 id="demo"></h3>
+    </div>
+
+    <!--create an three array-->
+    <div class="array">
+        <h1>create an three array</h1>
+        <h3 id="demo2"></h3>
+    </div>
+
+    <!--Join all elements of an array into a string - join()-->
+    <div class="array">
+        <h1>Join all elements of an array into a string - join()</h1>
+        <h3 id="demo3"></h3>
+    </div>
+
+    <!--The pop() method removes the last element from an array.-->
+    <div class="array">
+        <h1>The pop() method removes the last element from an array.</h1>
+        <h3 id="demo4"></h3>
+        <h3 id="demo4.5"></h3>
+    </div>
+
+
+    <!--Add new elements to the end of an array - push()-->
+    <div class="array">
+        <h1>Add new elements to the end of an array - push()</h1>
+        <button type="button" onclick="myFunction()">clcik to add </button>
+        <button type="button" onclick="myFunction2()">clcik to delete </button>
+        <h3 id="demo5"></h3>
+    </div>
+
+    <!--Reverse the order of the elements in an array - reverse()-->
+    <div class="array">
+        <h1>Reverse the order of the elements in an array - reverse()</h1>
+        <button onclick="myFunction3()">Click Here to reavers</button>
+        <h3 id="demo6"></h3>
+    </div>
+
+
+    <!--Remove the first element of an array - shift()-->
+    <div class="array">
+        <h1>Remove the first element of an array - shift()</h1>
+        <h3 id="demo7"></h3>
+    </div>
+
+    <!--The sort() method sorts an array alphabetically.-->
+    <div class="array">
+        <h1>The sort() method sorts an array alphabetically.</h1>
+        <button onclick="mySort()">click here</button>
+        <h3 id="demo8"></h3>
+    </div>
+
+
+    <!--The sort() method sorts an array alphabetically.-->
+    <div class="array">
+        <h1>The sort() method sorts an array alphabetically.</h1>
+        <button onclick="mySort2()">click here</button>
+        <h3 id="demo8.5"></h3>
+    </div>
+
+
+    <!--Sort numbers in random order - sort()-->
+    <div class="array">
+        <h1>Sort numbers in random order - sort()</h1>
+        <button onclick="mySort3()">click here</button>
+        <h3 id="demo9"></h3>
+    </div>
+
+
+
+    <!--Sort objects by numeric properties - sort()-->
+    <div class="array">
+        <h1>Sort objects by numeric properties - sort()</h1>
+        <button onclick="mySort4()">click here</button>
+        <h3 id="demo10"></h3>
+    </div>
+
+
+
+    <!--Add an element to position 2 in an array - splice()-->
+    <div class="array">
+        <h1>Add an element to position 2 in an array - splice()</h1>
+        <button onclick="mySort5()">click here</button>
+        <h3 id="demo11"></h3>
+    </div>
+
+
+    <!--The unshift() method adds new elements to the beginning of an array.-->
+    <div class="array">
+        <h1>The unshift() method adds new elements to the beginning of an array.</h1>
+        <button onclick="mySort6()">click here</button>
+        <h3 id="demo12"></h3>
+    </div>
+
+
+
+
+
+
+
+    <!--create an two array-->
+    <script>
+        var personOne = ['noyon', 'Ahmed'];
+        var personTwo = ['kamal', 'jamal'];
+        var personThree = personTwo.concat(personOne);
+        document.getElementById('demo').innerHTML = personThree;
+    </script>
+
+    <!--create an three array-->
+    <script>
+        var personOne = ['noyon', 'ahmed'];
+        var personTwo = ['karim', 'ahmed'];
+        var personThree = ['jamal', 'ahmed'];
+        var personFour = personOne.concat(personTwo, personThree);
+        document.getElementById('demo2').innerHTML = personFour
+    </script>
+
+    <!--Join all elements of an array into a string - join()-->
+    <script>
+        var persons = ['ami', 'tmi', 'jabo', 'harie'];
+        document.getElementById('demo3').innerHTML = persons.join('@')
+    </script>
+
+
+    <!--The pop() method removes the last element from an array.-->
+    <script>
+        var persons = ['ami', 'noyon', 'ahmed'];
+        document.getElementById('demo4').innerHTML = persons;
+        document.getElementById('demo4').innerHTML = persons.join('@');
+        persons.pop();
+        document.getElementById('demo4.5').innerHTML = persons
+    </script>
+
+    <!--Add new elements to the end of an array - push()-->
+    <script>
+        var persons = ['this', 'is', 'noyon'];
+        document.getElementById('demo5').innerHTML = persons;
+
+        function myFunction() {
+            document.getElementById('demo5').innerHTML = persons;
+            persons.push('ahmed');
+        }
+
+        function myFunction2() {
+            document.getElementById('demo5').innerHTML = persons;
+            persons.pop();
+        }
+    </script>
+
+    <!--Reverse the order of the elements in an array - reverse()-->
+    <script>
+        var persons = ['this', 'is', 'noyon'];
+        document.getElementById('demo6').innerHTML = persons;
+
+        function myFunction3() {
+            document.getElementById('demo6').innerHTML = persons;
+            persons.reverse();
+        }
+    </script>
+
+    <!--Remove the first element of an array - shift()-->
+    <script>
+        var person = ['this', 'is', 'noyon']
+        document.getElementById('demo7').innerHTML = person;
+        person.shift();
+        document.getElementById('demo7').innerHTML = person
+    </script>
+
+    <!--The sort() method sorts an array alphabetically.-->
+    <script>
+        var sort = [1,3,2,6,5,4];
+        function mySort() {
+            sort.sort(function (a, b) {
+                return a - b
+            })
+            document.getElementById('demo8').innerHTML = sort;
+        }
+        mySort()
+    </script>
+    <!--The sort() method sorts an array alphabetically.-->
+    <script>
+        var hello = [30, 33, 100, 10, 1, 64];
+        document.getElementById('demo8.5').innerHTML = hello;
+
+        function mySort2() {
+            document.getElementById('demo8.5').innerHTML = hello;
+            hello.sort(function (a, b) {
+                return b - a
+            })
+        }
+    </script>
+
+    <!--Sort numbers in random order - sort()-->
+    <script>
+        var sorting = [10, 29, 48, 128, 83, 4843, 0];
+        document.getElementById('demo9').innerHTML = sorting;
+
+        function mySort3() {
+            document.getElementById('demo9').innerHTML = sorting;
+            sorting.sort(function () {
+                return 0.5 - Math.random()
+            });
+        }
+    </script>
+
+
+    <!--Sort objects by numeric properties - sort()-->
+    <script>
+        var cars = [{
+                type: 'volvo',
+                year: 2016
+            },
+            {
+                type: 'solvo',
+                year: 2013
+            },
+            {
+                type: 'bmw',
+                year: 2018
+            }
+        ];
+
+        function mySort4() {
+            cars.sort(function (a, b) {
+                return 0.5 - Math.random()
+            })
+            displayCars();
+        }
+
+        function displayCars() {
+            document.getElementById('demo10').innerHTML =
+                cars[0].type + ' ' + cars[0].year + '<br>' +
+                cars[1].type + ' ' + cars[1].year + '<br>' +
+                cars[2].type + ' ' + cars[2].year
+        }
+        displayCars();
+    </script>
+
+    <!--Add an element to position 2 in an array - splice()-->
+    <script>
+        var fruits = ['apple', 'banana', 'mango', 'jam'];
+        document.getElementById('demo11').innerHTML = fruits;
+
+        function mySort5() {
+            fruits.splice(2, 0, 'amm', 'jam');
+            document.getElementById('demo11').innerHTML = fruits;
+        }
+    </script>
+
+    <!--The unshift() method adds new elements to the beginning of an array.-->
+    <script>
+        var persons = ['this', 'is', 'noyon', 'ahmed'];
+        document.getElementById('demo12').innerHTML = persons;
+
+        function mySort6() {
+            persons.unshift('this is me ');
+            document.getElementById('demo12').innerHTML = persons
+        }
+    </script>
+</body>
+
+</html>

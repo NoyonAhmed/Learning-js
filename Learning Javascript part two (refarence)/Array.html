@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+
+<body>
+    <div class="array">
+        <h1>Js Array Referanse</h1>
+        <h2 id="demo"></h2>
+        <h2 id="demo2"></h2>
+        <h2 id="demo3"></h2>
+        <h2 id="demo4"></h2>
+        <h2 id="demo5"></h2>
+        <h2 id="demo6"></h2>
+        <h2 id="demo7"></h2>
+        <h2 id="demo8"></h2>
+        <h2 id="demo9"></h2>
+        <h2 id="demo10"></h2>
+        <h2 id="demo11"></h2>
+        <h2 id="demo12"></h2>
+        <button type="button" name="button" onclick="myFunction()">Click</button>
+        <h2 id="demo13"></h2>
+        <button type="button" name="button" onclick="myFunction2()">Click</button>
+        <h2 id="demo14"></h2>
+        <button type="button" name="button" onclick="myFunction3()">Click</button>
+        <h2 id="demo15"></h2>
+        <h2 id="demo16"></h2>
+        <h2 id="demo17"></h2>
+        <h2 id="demo18"></h2>
+        <h2 id="demo19"></h2>
+        <h2 id="demo20"></h2>
+    </div>
+
+
+
+    <!-- Js property (length) -->
+    <script type="text/javascript">
+        var a = 'this is my name';
+        document.getElementById('demo').innerHTML = a.length;
+        var x = ['korim', 'rahim', 'noyon', 'ahmed'];
+        document.getElementById('demo2').innerHTML = x.length;
+    </script>
+    <!-- Js Method -->
+    <!-- Concat() -->
+    <script type="text/javascript">
+        var x = ['Banana', 'Apple', 'Orage', 'Mango'];
+        var y = ['Noyon', 'Shopon', 'Shopna', 'Priya'];
+        document.getElementById('demo3').innerHTML = x.concat(y);
+    </script>
+    <!-- includes() -->
+    <script type="text/javascript">
+        var x = ['Banana', 'Apple', 'Orage', 'Mango'];
+        document.getElementById('demo3').innerHTML = x.includes('Banana'); //it is case sensetive
+    </script>
+    <!-- indexOf() -->
+    <script type="text/javascript">
+        var x = ['Banana', 'Apple', 'Orage', 'Mango'];
+        document.getElementById('demo3').innerHTML = x.indexOf('Apple'); //it is case sensetive
+    </script>
+    <!-- lastIndexOf() -->
+    <script type="text/javascript">
+        var x = ['Banana', 'Apple', 'Orage', 'Mango'];
+        document.getElementById('demo4').innerHTML = x.lastIndexOf('Orage'); //it is case sensetive
+    </script>
+    <!-- Join() -->
+    <script type="text/javascript">
+        var x = ['Banana', ' Apple', ' Orage', ' Mango'];
+        document.getElementById('demo5').innerHTML = x.join("'s"); //add new elements
+    </script>
+    <!-- pop() -->
+    <script type="text/javascript">
+        var x = ['Banana', ' Apple', ' Orage', ' Mango'];
+        document.getElementById('demo6').innerHTML = x.pop();
+        /*remove last elements of the objects and returns that objects*/
+    </script>
+    <!-- push() -->
+    <script type="text/javascript">
+        var x = ['Banana', ' Apple', ' Orage', ' Mango'];
+        document.getElementById('demo7').innerHTML = x.push();
+        /*add last elements of the objects and returns that objects length*/
+    </script>
+    <!-- shift() -->
+    <script type="text/javascript">
+        var x = ['Banana', ' Apple', ' Orage', ' Mango'];
+        document.getElementById('demo8').innerHTML = x.shift();
+        /*remove first elements of the objects and returns that objects*/
+    </script>
+    <!-- unshift() confused asi-->
+    <script type="text/javascript">
+        var x = ['Banana', ' Apple', ' Orage', ' Mango'];
+        document.getElementById('demo9').innerHTML = x.unshift();
+        /*add last elements of the objects and returns that objects length*/
+    </script>
+    <!-- slice() -->
+    <script type="text/javascript">
+        var x = ['Banana', ' Apple', ' Orage', ' Mango'];
+        document.getElementById('demo10').innerHTML = x.slice(2);
+        /*that mean objects begin from here*/
+    </script>
+    <!-- reverse() -->
+    <script type="text/javascript">
+        var x = ['Banana', ' Apple', ' Orage', ' Mango'];
+        document.getElementById('demo11').innerHTML = x.reverse();
+        /*that mean objects reverse by the length or capital  or else*/
+    </script>
+    <!-- sort() -->
+    <script type="text/javascript">
+        var x = ['Banana', ' Apple', ' Orage', ' Mango'];
+        document.getElementById('demo12').innerHTML = x.sort();
+        /*that means its see lenth of the objects and return consistantly one by one*/
+    </script>
+    <!-- fill() -->
+    <script type="text/javascript">
+        var x = ['Banana', ' Apple', ' Orage', ' Mango'];
+        document.getElementById('demo13').innerHTML = x;
+
+        function myFunction() {
+            document.getElementById('demo13').innerHTML = x.fill('noyon');
+        }
+    </script>
+    <script type="text/javascript">
+        var y = ['Banana', ' Apple', ' Orage', ' Mango'];
+        document.getElementById('demo14').innerHTML = y;
+
+        function myFunction2() {
+            document.getElementById('demo14').innerHTML = y.fill('noyon', 3);
+        }
+    </script>
+    <!-- Filter() -->
+    <script type="text/javascript">
+        var a = [20, 30, 34, 17, 18, 40, 33];
+
+        function checkAdult(age) {
+            return age >= 18;
+        };
+
+        function myFunction3() {
+            document.getElementById('demo15').innerHTML = a.filter(checkAdult);
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- 
+
+indexOf();
+lastIndexOf();
+concat();
+includes();
+pop();
+push();
+shift();
+unshift();
+fill();
+filter();
+reverse();
+sort();
+split();
+slice();
+join(); 
+
+-->

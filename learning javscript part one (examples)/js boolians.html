@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js boolians</title>
+</head>
+
+<body>
+    <!--Display the value of Boolean(10 > 9)-->
+    <div class="js_boolians">
+        <h1>Display the value of Boolean(10 > 9)</h1>
+        <h2 id="demo"></h2>
+    </div>
+
+    <!--Display the value of 10 > 9:-->
+    <div class="js_boolians">
+        <h1>Display the value of 10 > 9:</h1>
+        <h2 id="demo2"></h2>
+    </div>
+
+    <!--Display the value of 10 > 9:-->
+    <div class="js_boolians">
+        <h1>Display the value of 10 > 9:</h1>
+        <button type="button" onclick="myFunction()">click</button>
+        <h2 id="demo3"></h2>
+    </div>
+
+
+    <!--Everything with a real value is true-->
+    <div class="js_boolians">
+        <h1>Everything with a real value is true</h1>
+        <h2 id="demo4"></h2>
+    </div>
+
+
+    <!--The Boolean value of zero is false-->
+    <div class="js_boolians">
+        <h1>The Boolean value of zero is false</h1>
+        <button onclick="myFunction2()">Click</button>
+        <h2 id="demo5"></h2>
+    </div>
+
+
+
+    <!--Display the value of Boolean(10 > 9)-->
+    <script>
+        document.getElementById('demo').innerHTML = (10 > 11);
+    </script>
+
+    <!--Display the value of 10 > 9:-->
+    <script>
+        document.getElementById('demo2').innerHTML = 10 > 9
+    </script>
+
+    <!--Display the value of 10 > 9:-->
+    <script>
+        function myFunction() {
+            document.getElementById('demo3').innerHTML = (10 > 2)
+        }
+    </script>
+
+    <!--Everything with a real value is true-->
+    <script>
+        var a = Boolean(2);
+        var b = Boolean(100);
+        var c = Boolean(-199);
+        var d = Boolean('hello');
+        var e = Boolean(false);
+        var f = Boolean(1 + 2 / 4 * 23);
+        var g = Boolean(0);
+        document.getElementById('demo4').innerHTML = a + '<br>' + b + '<br>' + c + '<br>' + d + '<br>' + e + '<br>' + f +
+            '<br>' + g
+    </script>
+
+    <!--The Boolean value of zero , minus zero , empty ,  undefind, null  value is false-->
+    <script>
+        function myFunction2() {
+            var a = 0;
+            var b = -0;
+            var c = '';
+            var d;
+            var e = null
+            document.getElementById('demo5').innerHTML =
+                Boolean(a) + '<br>' +
+                Boolean(b) + "<br>" +
+                Boolean(c) + '<br>' +
+                Boolean(d)
+        }
+    </script>
+</body>
+
+</html>

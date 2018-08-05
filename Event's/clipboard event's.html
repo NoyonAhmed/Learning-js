@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clipboard Event's</title>
+</head>
+<body>
+    <!-- copy, cut and paste -->
+    <div>
+            <h1>Copy, Cut and Paste</h1>
+            <input type="text" id="demo16" style="width: 400px" value="try to copy, cut and paste someting from here">
+        </div>
+    
+    
+        <script>
+            var copy = document.getElementById('demo16');
+            copy.addEventListener('copy', function () {
+               alert('you copied from here')
+            })
+            copy.addEventListener('cut', function () {
+               alert('you cutted from here')
+            })
+            copy.addEventListener('paste', function () {
+               alert('you paste someting here')
+            })
+        </script>
+    
+</body>
+</html>
